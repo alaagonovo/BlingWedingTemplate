@@ -20,8 +20,17 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["next", "react", "node"], // Optional: Define global types
+    "noUnusedLocals": true, // Optional: Catch unused variables
+    "noUnusedParameters": true // Optional: Catch unused parameters
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/data/links.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/data/links.ts"
+  ],
   "exclude": ["node_modules"]
 }
