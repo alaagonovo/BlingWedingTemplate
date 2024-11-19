@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fraunces.className}>
-        {/* <Header /> */}
+        <Header />
         {children}
       </body>
     </html>

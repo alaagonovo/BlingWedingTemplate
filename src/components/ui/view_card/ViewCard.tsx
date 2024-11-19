@@ -6,7 +6,6 @@ interface IViewcard {
   vid_src?: string;
 }
 function ViewCard({ img_src, vid_src }: IViewcard) {
-  console.log(img_src);
   return (
     <div className={styles.main_cover}>
       {img_src && (
