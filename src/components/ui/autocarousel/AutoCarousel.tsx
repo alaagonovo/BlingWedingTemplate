@@ -64,7 +64,7 @@ function AutoCarousel({
     infinite: true,
     slidesToShow,
     slidesToScroll: 1, // Smooth scrolling, one item at a time
-    autoplay: false,
+    autoplay: true,
     speed: 5000, // Adjust for smooth infinite scrolling
     autoplaySpeed: 1000, // Constant scroll with linear ease
     cssEase: "linear",
