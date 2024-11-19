@@ -21,6 +21,7 @@ function Blog() {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          autoplay:false,
         },
       },
     ],

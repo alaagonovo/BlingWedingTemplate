@@ -34,9 +34,9 @@ img {
     justify-content: center;
   }
 }
-@media (max-width: 520px) {
+/* @media (max-width: 350px) {
   .slick-track {
     display: flex !important;
     gap: 12px !important;
   }
-}
+} */
