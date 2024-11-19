@@ -127,7 +127,6 @@ function AutoCarousel({
   reverse?: boolean;
 }) {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
-
   // Update window width dynamically
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -177,7 +176,7 @@ function AutoCarousel({
     slidesToScroll: 1, // Smooth scrolling, one item at a time
     autoplay: true,
     speed: 5000, // Adjust for smooth infinite scrolling
-    autoplaySpeed: 0, // Constant scroll with linear ease
+    autoplaySpeed: 1000, // Constant scroll with linear ease
     cssEase: "linear",
     rtl: reverse || false,
     pauseOnHover: false,
