@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import "./globals.css";
-// import Header from "@/components/header/Header";
+import Header from "@/components/header/Header";
 
 import "aos/dist/aos.css";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fraunces.className}>
-        {/* <Header /> */}
+        <Header />
         {children}
       </body>
     </html>
