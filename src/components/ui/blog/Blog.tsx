@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import MobileFrame from "../mobileframe/Mobile";
 
 function Blog() {
-  var settings = {
+  let settings = {
     dots: false,
     infinite: true,
     speed: 500,
