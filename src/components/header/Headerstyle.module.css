@@ -1,88 +1,101 @@
 .header_Container {
   display: flex;
+  flex-direction: column;
   top: 0;
   position: fixed;
   z-index: 99;
   width: 100%;
   background-color: #fff;
-  padding: 4px 0;
   transition: transform 0.6s ease; /* Smooth hide/show transition */
+  padding: 0.2rem 0;
 }
-
+/* .location {
+  background-color: var(--bg-overlay-color);
+} */
+/* .location p {
+  font-size: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  margin: 4px 0px 4px calc((100% - 980px) * 0.5);
+  left: 609px;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: start;
+  align-self: start;
+} */
+.location span {
+  margin-inline-end: 4px;
+}
+.logo {
+  position: relative;
+  left: 151px;
+}
 .logo img {
-  width: 158px;
+  width: 160px;
   height: 71px;
 }
-
-.mainTitle {
-  display: none;
-}
-
 .header_Container nav {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 96%;
-  margin: auto;
 }
 
+.header_Container nav .links_Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .links_List a {
-  padding: 10px 15px;
+  padding: 10px 22px;
   margin: 4px;
   background: rgba(247, 247, 247, 0);
   display: block;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--bg-overlay-color);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-links-header);
 }
-
 .links_List a:hover {
-  opacity: 0.7;
+  color: var(--color-links-hover);
 }
-
 .active {
   color: var(--color-links-hover) !important;
 }
-
 .burgerIcon {
   display: none;
   z-index: 999;
 }
-
 .hidden {
   display: none;
 }
-
-.mainTitle {
-  display: none;
+@media (max-width: 1260px) {
+  .header_Container nav .links_Container {
+    transform: translate(-150px, -50%);
+    width: 580px;
+  }
 }
-
 @media (max-width: 1040px) {
+  .location p {
+    width: 100%;
+    margin: 4px 0;
+    left: 0;
+    text-align: center;
+  }
   .header_Container nav .links_Container {
     display: none;
   }
   .header_Container nav {
-    justify-content: start;
+    justify-content: center;
   }
   .logo {
-    display: none;
-  }
+    position: relative;
+    left: 0;
 
+    /* transform: translateX(48px); */
+  }
   .burgerIcon {
     display: block;
     position: absolute;
-    right: 12px;
-  }
-  .logo img {
-    width: 100px;
-    height: 60px;
-  }
-  .mainTitle {
-    display: block;
-    color: var(--bg-overlay-color);
-    font-weight: 500;
-    font-size: 32px;
+    left: 12px;
   }
 }
 .scroll_hidden {

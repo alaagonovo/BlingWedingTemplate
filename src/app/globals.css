@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --bg-overlay-color: #83503e;
   --color-main-titles: #1d1d1f;
   --color-main-paragraphs: #454544;
   --second-bg-color: #f7f7f5;
+  --bg-overlay-color: rgb(228, 222, 222);
+  --color-links-header: #000000;
+  --color-links-hover: #6c5656;
 }
 * {
   margin: 0;
@@ -13,7 +15,7 @@
   box-sizing: border-box;
 }
 body {
-  /* font-family: "Fraunces", serif; */
+ 
   min-width: 320px;
   overflow-x: hidden;
 }
@@ -26,4 +28,10 @@ a {
 }
 img {
   object-fit: cover;
+}
+@media (max-width: 440px) {
+  .slick-slide > div {
+    display: flex;
+    justify-content: center;
+  }
 }

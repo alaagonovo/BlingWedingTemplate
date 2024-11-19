@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Fraunces, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Header from "@/components/header/Header";
 
 import "aos/dist/aos.css";
 
-const fraunces = Fraunces({
+const nunito = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "900"],
+  weight: ["1000", "200", "300", "400", "500","600","700","800", "900"],
   style: ["normal", "italic"],
 });
 export const metadata: Metadata = {
@@ -23,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fraunces.className}>
+      <body className={nunito.className}>
         <Header />
         {children}
       </body>
