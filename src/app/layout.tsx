@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Nunito_Sans } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["1000", "200", "300", "400", "500","600","700","800", "900"],
+  weight: ["1000", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
 });
 export const metadata: Metadata = {
