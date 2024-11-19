@@ -1,13 +1,12 @@
 import styles from "./blog.module.css";
 import { blogData } from "./data";
-
 import Button from "../Button/Button";
 import React from "react";
 import Slider from "react-slick";
 import MobileFrame from "../mobileframe/Mobile";
 
 function Blog() {
-  let settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
