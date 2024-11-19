@@ -6,10 +6,10 @@ function AutoSlider() {
   return (
     <section className="flex flex-col gap-2">
       <div className="max-w-[1077px] mx-auto mt-2 mb-12 px-5 text-center">
-        <h1 className="text-center font-extrabold my-6  text-xl  xl:text-7xl">
+        <h1 className="text-center font-extrabold my-8  text-xl  xl:text-7xl">
           Artfully Capturing Memories
         </h1>
-        <p className="text-center  text-sm sm:text-base text-slate-500 mb-6">
+        <p className="text-center  text-sm md:text-base text-slate-500 mb-6">
           There’s nothing more incredible than finding the one person you can’t
           live without. Our mission is to document your wedding day in a way
           that feels authentic, so that years from now, you can relive each
