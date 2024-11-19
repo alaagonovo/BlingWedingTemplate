@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ViewCard from "../view_card/ViewCard";
-
+import "./autoCarousel.css";
 interface IAutoCarousel {
   img_src?: string;
   vid_src?: string;
