@@ -34,3 +34,9 @@ img {
     justify-content: center;
   }
 }
+@media (max-width: 520px) {
+  .slick-track {
+    display: flex;
+    grid-area: 12px;
+  }
+}
