@@ -17,7 +17,7 @@ function Header() {
 
   // Handle scroll behavior
   const handleScroll = useCallback(() => {
-    if (typeof window !== "undefined") {
+    if (window && typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
       setIsHidden(currentScrollY > lastScrollY && currentScrollY > 100); // Hide on scroll down
       setLastScrollY(currentScrollY);
@@ -25,7 +25,7 @@ function Header() {
   }, [lastScrollY]);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (window && typeof window !== "undefined") {
       setLastScrollY(window.scrollY); // Initialize scroll position
       window.addEventListener("scroll", handleScroll);
     }
