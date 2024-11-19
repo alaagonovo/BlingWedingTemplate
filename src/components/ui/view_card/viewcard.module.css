@@ -1,0 +1,15 @@
+.main_cover {
+  width: 345px;
+  height: 195px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img_Cover {
+  object-fit: cover;
+  height: 195px !important;
+}

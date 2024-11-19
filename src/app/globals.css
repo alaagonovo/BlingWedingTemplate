@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg-overlay-color: #83503e;
+  --color-main-titles: #1d1d1f;
+  --color-main-paragraphs: #454544;
+  --second-bg-color: #f7f7f5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Fraunces", serif; */
+  min-width: 320px;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+img {
+  object-fit: cover;
+}
