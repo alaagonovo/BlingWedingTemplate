@@ -18,7 +18,7 @@ function AutoSlider() {
       </div>
       <AutoCarousel data={carouselData.line1} />
       <AutoCarousel data={carouselData.line2} reverse={true} />
-      <AutoCarousel data={carouselData.line1} />
+      <AutoCarousel data={carouselData.line3} />
       <About />
     </section>
   );
