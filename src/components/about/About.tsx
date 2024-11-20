@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./about.module.css";
-import Button from "../ui/Button/Button";
+
 import ViewCard from "../ui/view_card/ViewCard";
 import Image from "next/image";
 function About() {
