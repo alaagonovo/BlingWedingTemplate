@@ -29,7 +29,7 @@
   justify-content: center;
   font-size: 14px;
   height: calc((100vh - 100px) / 6);
-  color: var(--bg-overlay-color);
+  color: var(--color-main-titles);
   align-items: center;
 }
 .aside_Container.open {

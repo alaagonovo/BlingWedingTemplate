@@ -34,15 +34,15 @@
   border-bottom: 4px solid transparent;
 }
 .triangle_right {
-  border-left: 6px solid var(--bg-overlay-color);
+  border-left: 6px solid var(--color-links-hover);
 }
 .triangle_left {
-  border-right: 6px solid var(--bg-overlay-color);
+  border-right: 6px solid var(--color-links-hover);
 }
 .line {
   margin: 0 !important;
   width: 100px;
-  border: 1px solid var(--bg-overlay-color);
+  border: 1px solid var(--color-links-hover);
   height: 0;
 }
 .image_left {
