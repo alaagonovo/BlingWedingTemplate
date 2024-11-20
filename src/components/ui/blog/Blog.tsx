@@ -54,7 +54,7 @@ function Blog() {
         data-aos-offset="0"
       >
         <h1>Explore Our</h1>
-        <Button link="/packages" text="PACKAGES" />
+        <Button link="/packages" text="COUPONS" />
       </div>
     </section>
   );

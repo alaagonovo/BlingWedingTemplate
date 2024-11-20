@@ -26,12 +26,12 @@ function About() {
         document your once-in-a-lifetime moments, so you can relive them
         forever.
       </p>
-      <Button text="Book Your Session" link="/" />
+      {/* <Button text="Book Your Session" link="/" /> */}
       <div className={styles.image_left} data-aos="fade-right">
-        <ViewCard img_src="/1.webp" />
+        <ViewCard img_src="/14.webp" />
       </div>
       <div className={styles.image_right} data-aos="fade-left">
-        <Image src="/2.webp" alt="view image" width={250} height={280} />
+        <Image src="/4.webp" alt="view image" width={250} height={280} />
       </div>
     </div>
   );

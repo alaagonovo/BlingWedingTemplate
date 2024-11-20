@@ -11,5 +11,6 @@
 }
 .img_Cover {
   object-fit: cover;
+  object-position: center;
   height: 195px !important;
 }

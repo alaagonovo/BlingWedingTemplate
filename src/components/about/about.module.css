@@ -49,7 +49,8 @@
 .image_left {
   position: absolute;
   left: -100px;
-  bottom: -2rem;
+  bottom: -4rem;
+
 }
 .image_right {
   position: absolute;
