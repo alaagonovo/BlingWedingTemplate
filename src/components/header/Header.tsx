@@ -42,7 +42,7 @@ const Header = () => {
       }`}
     >
       <div className={styles.location}>
-        <p>
+        <p >
           <span>
             <img src="/svgs/location.svg" alt="location" />
           </span>
