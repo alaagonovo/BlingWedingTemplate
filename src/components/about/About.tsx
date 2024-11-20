@@ -20,7 +20,7 @@ function About() {
       <p>
         From the first glance to the last dance, we blend artistry with
         authenticity to preserve every heartfelt detail of your wedding day. We
-        believe each couple’s love is unique, and our goal is to create images
+        believe each couple’s love is unique, and our goal is to create moments
         that reflect your personalities and connection. With a keen eye for
         emotion and a dedication to making you feel at ease, we’re here to
         document your once-in-a-lifetime moments, so you can relive them

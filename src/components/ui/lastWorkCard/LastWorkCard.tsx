@@ -23,10 +23,10 @@ const LastWorkCard: React.FC<CardProps> = ({
       }
     >
       <div className={styles.img_Container}></div>
-      <div className={styles.info}>
+      {/* <div className={styles.info}>
         <p>{title}</p>
         <p>{year}</p>
-      </div>
+      </div> */}
     </div>
   );
 };

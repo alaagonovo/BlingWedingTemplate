@@ -35,7 +35,7 @@
   .content {
     position: relative;
     top: 0;
-    grid-template-columns: repeat(1, 90%);
+    grid-template-columns: repeat(1, 94%);
     gap: 22px;
     justify-content: center;
     padding: 0rem;
