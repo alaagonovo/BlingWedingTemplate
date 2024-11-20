@@ -1,0 +1,115 @@
+.main_Steps {
+  margin: 0 2rem;
+}
+.steps_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  height: 651px;
+  margin: 2rem 0;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.img_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: 50% 100%;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.step_content {
+  background-color: var(--bg-overlay-color);
+  padding: 6rem 2rem;
+}
+.step_content h1 {
+  font-size: 38px;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.step_content h2 {
+  font-size: 38px;
+  font-weight: 200;
+  margin-inline-start: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.step_content p {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 1rem 0;
+  line-height: 1.6;
+  margin-inline-start: 2.5rem;
+  max-width: 416px;
+}
+.bottom_cont {
+  width: 477px;
+  margin: auto;
+  padding: 1rem 0 3rem 0;
+}
+.bottom_cont h1 {
+  font-size: 36px;
+  font-weight: 200;
+}
+@media (max-width: 896px) {
+  .steps_grid {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
+  .img_container {
+    background-size: cover;
+    /* background-position: top center; */
+    background-attachment: scroll;
+    height: 400px;
+    order: -1;
+  }
+  .bottom_cont {
+    width: 96%;
+  }
+}
+@media (max-width: 440px) {
+  .main_Steps {
+    margin: 0;
+  }
+  .steps_grid {
+    margin-top: 1rem !important;
+    margin-bottom: 0;
+  }
+  .step_content {
+    padding: 1.5rem;
+  }
+  .mobile_Title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .step_content h1 {
+    font-size: 18px;
+    width: fit-content;
+    margin: 0;
+  }
+  .step_content h2 {
+    width: fit-content;
+    margin: 0;
+    font-size: 25px;
+  }
+  .step_content p {
+    margin-inline-start: 0;
+  }
+  .bottom_cont {
+    width: 96%;
+    margin: auto;
+    padding: 1rem 0 2rem 0;
+  }
+  .bottom_cont h1 {
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+  }
+  .bottom_cont a {
+    width: 150px !important;
+  }
+}
