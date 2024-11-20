@@ -88,21 +88,22 @@
   .step_content {
     padding: 1.5rem;
   }
-  .mobile_Title {
+  /* .mobile_Title {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 6px;
-  }
-  .step_content h1 {
+  } */
+  /* .step_content h1 {
     font-size: 18px;
     width: fit-content;
     margin: 0;
-  }
-  .step_content h2 {
+  } */
+  /* .step_content h2 {
     width: fit-content;
     margin: 0;
     font-size: 25px;
-  }
+  } */
   .step_content p {
     margin-inline-start: 0;
   }
