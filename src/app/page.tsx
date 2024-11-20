@@ -6,6 +6,7 @@ import AOS from "aos";
 import Blog from "@/components/ui/blog/Blog";
 import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
 import CheckOurLastWorks from "@/components/checkourlastworks/CheckOurLastWorks";
+import Behindtheagency from "@/components/behindtheagency/Behindtheagency";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -18,6 +19,7 @@ export default function Home() {
       <AutoSlider />
       <Blog />
       <CheckOurLastWorks />
+      <Behindtheagency />
     </main>
   );
 }

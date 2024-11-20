@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Kristi&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --color-main-titles: #1d1d1f;
   --color-main-paragraphs: #454544;
