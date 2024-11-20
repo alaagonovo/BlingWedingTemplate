@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./lastworkcard.module.css";
 interface CardProps {
-  title: string;
-  year: string;
+  // title: string;
+  // year: string;
   defaultImage: string;
   hoverImage: string;
 }
 const LastWorkCard: React.FC<CardProps> = ({
-  title,
-  year,
+  // title,
+  // year,
   defaultImage,
   hoverImage,
 }) => {

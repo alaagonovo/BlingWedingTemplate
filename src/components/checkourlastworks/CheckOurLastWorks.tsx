@@ -12,8 +12,8 @@ function CheckOurLastWorks() {
           </div>
           {latestWork.map((item, index) => (
             <LastWorkCard
-              title={item.title}
-              year={item.year}
+              // title={item.title}
+              // year={item.year}
               defaultImage={item.defaultImage}
               hoverImage={item.hoverImage}
               key={index}
