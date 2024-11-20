@@ -41,6 +41,14 @@ const Header = () => {
         isHidden ? styles.scroll_hidden : ""
       }`}
     >
+      <div className={styles.location}>
+        <p>
+          <span>
+            <img src="/svgs/location.svg" alt="location" />
+          </span>
+          Servicing social magic across Sydney | Destination Weddings Available
+        </p>
+      </div>
       <nav>
         <div className={styles.burgerIcon}>
           <Hamburger toggled={isOpen} toggle={setOpen} rounded />
