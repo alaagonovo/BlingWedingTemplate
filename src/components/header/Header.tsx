@@ -46,7 +46,8 @@ const Header = () => {
           <span>
             <img src="/svgs/location.svg" alt="location" />
           </span>
-          Servicing social magic across Sydney | Destination Weddings Available
+          Servicing social magic across the world | Destination Weddings
+          Available
         </p>
       </div>
       <nav>
