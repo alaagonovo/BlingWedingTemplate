@@ -11,6 +11,7 @@
   margin: 0 0 1rem 0;
   font-weight: 500;
   color: var(--color-main-titles);
+  font-size: 2rem;
 }
 .about_container p {
   color: var(--color-main-paragraphs);
