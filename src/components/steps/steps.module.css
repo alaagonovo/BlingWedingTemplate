@@ -59,7 +59,14 @@
     grid-template-columns: repeat(1, 1fr);
     height: auto;
   }
-  .img_container {
+  .video_container {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .img_container,
+  .video_background {
     background-size: cover;
     /* background-position: top center; */
     background-attachment: scroll;

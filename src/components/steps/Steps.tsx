@@ -223,7 +223,6 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                   <video
                     className={styles.video_container}
                     src={item.vid}
-                    controls
                     autoPlay
                     loop
                     muted
