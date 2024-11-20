@@ -14,7 +14,9 @@
 .title_Container .Image {
   height: 587px;
   width: 100%;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .title_Container h1 {
   position: absolute;
@@ -32,6 +34,7 @@
 .signature span {
   font-family: "Kristi", cursive;
   font-weight: 400;
+  font-size: 2rem;
 }
 .main_behind_agency h2 {
   font-size: 1.4rem;

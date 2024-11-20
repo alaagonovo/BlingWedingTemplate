@@ -7,15 +7,11 @@ function Behindtheagency() {
       <div className={styles.title_Container}>
         <div className={styles.img_container}>
           <h1>BEHIND the AGENCY</h1>
-          <div data-aos="fade-right">
-            <Image
-              src="/Esraa.webp"
-              alt="esraa phot"
-              height={480}
-              width={100}
-              className={styles.Image}
-            />
-          </div>
+          <div
+            data-aos="fade-right"
+            style={{ backgroundImage: "url(/Esraa.webp)" }}
+            className={styles.Image}
+          ></div>
         </div>
       </div>
       <div>
