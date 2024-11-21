@@ -8,7 +8,7 @@ function CheckOurLastWorks() {
       <div className={styles.top_Part}>
         <div className={styles.content}>
           <div className={styles.title_Container}>
-            <h1>CHECK OUR LAST WORK</h1>
+            <h1>CHECK OUT OUR LATEST WORK!</h1>
           </div>
           {latestWork.map((item, index) => (
             <LastWorkCard

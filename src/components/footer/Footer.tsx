@@ -22,7 +22,10 @@ function Footer() {
           <div style={{ marginTop: "2rem", textAlign: "center" }}>
             <span className={styles.copyright}>
               © 2024 BLING.
-              <br /> Proudly Designed by ALAA AYAAD
+              <br /> Proudly Designed by{" "}
+              <Link className="font-semibold" href="https://www.gonovo.tech/">
+                GONOVO
+              </Link>
             </span>
             <div className={styles.terms_polices_container}>
               <Link href="/" className={styles.terms_Polices}>

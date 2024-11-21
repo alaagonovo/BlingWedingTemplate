@@ -32,6 +32,9 @@ a {
 img {
   object-fit: cover;
 }
+.main_Margin {
+  margin-top: 105px;
+}
 @media (max-width: 440px) {
   .slick-slide > div {
     display: flex;

@@ -1,0 +1,32 @@
+.hero_section {
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  background-image: url("/2.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.texts h1 {
+  font-size: 10rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 0.9;
+  border-bottom: 2px solid #fff;
+  padding: 0 4rem;
+  color: #fff;
+}
+.texts p {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+}
