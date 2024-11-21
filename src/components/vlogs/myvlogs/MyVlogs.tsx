@@ -34,7 +34,7 @@ function MyVlogs() {
                 className={styles.play_btn}
                 onClick={() => {
                   if (setVideo_src) {
-                    setVideo_src("/1.mov"); // Call only if defined
+                    setVideo_src("/vlogs.mp4"); // Call only if defined
                   }
                 }}
               >
