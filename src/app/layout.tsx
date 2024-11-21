@@ -3,10 +3,10 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from "@/components/header/Header";
-
 import "aos/dist/aos.css";
+import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import WithAOS from "@/components/withoas/WithAOS";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -27,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <Header />
-        {children}
-        <Footer />
+        <WithAOS>
+          <Header />
+          {children}
+          <Footer />
+        </WithAOS>
       </body>
     </html>
   );

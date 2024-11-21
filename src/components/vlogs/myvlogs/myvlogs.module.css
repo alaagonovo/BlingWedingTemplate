@@ -25,7 +25,8 @@
 }
 .second_pink {
   position: relative;
-  width: 1180px;
+  width: 90%;
+  min-width: 1180px;
   height: 90vh;
   background-color: var(--color-light-pink);
   margin: 10rem auto 2rem auto;
@@ -102,6 +103,7 @@
 @media (max-width: 1220px) {
   .second_pink {
     width: 100%;
+    min-width: 100%;
   }
   .first_black {
     width: 90%;
@@ -134,6 +136,7 @@
   }
   .second_pink {
     height: auto;
+    margin-top: 2rem;
     padding-bottom: 3rem;
   }
   .gallery_Item {
