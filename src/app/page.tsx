@@ -8,6 +8,7 @@ import CheckOurLastWorks from "@/components/checkourlastworks/CheckOurLastWorks"
 import Behindtheagency from "@/components/behindtheagency/Behindtheagency";
 import steps from "@/data/steps";
 import Steps from "@/components/steps/Steps";
+import Contactus from "@/components/contactus/Contactus";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -22,6 +23,7 @@ export default function Home() {
       <CheckOurLastWorks />
       <Behindtheagency />
       <Steps steps={steps} />
+      <Contactus />
     </main>
   );
 }
