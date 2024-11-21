@@ -2,7 +2,7 @@
   width: 90%;
   margin: auto;
   height: 100vh;
-  background-image: url("/2.webp");
+  background-image: url("/vlogsHero.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -14,9 +14,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 90%;
 }
 .texts h1 {
-  font-size: 10rem;
+  font-size: 6.5rem;
   font-weight: 900;
   margin: 0;
   line-height: 0.9;
@@ -29,4 +30,21 @@
   font-size: 1.5rem;
   color: #fff;
   font-weight: 700;
+}
+@media (max-width: 975px) {
+  .hero_section {
+    width: 100%;
+  }
+  .texts h1 {
+    width: 98%;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .texts h1 {
+    font-size: 4.5rem;
+  }
+  .texts p {
+    font-size: 1.2rem;
+  }
 }
