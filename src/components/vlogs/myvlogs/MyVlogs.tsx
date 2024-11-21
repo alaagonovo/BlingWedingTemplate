@@ -10,10 +10,10 @@ interface IVideo {
   image_src: string;
 }
 function MyVlogs() {
-  const [image_src, setImage_src] = useState<string>("");
+  //   const [image_src, setImage_src] = useState<string>("");
   const [video_src, setVideo_src] = useState<string>("");
   const handleUpdateStates = (item: IVideo) => {
-    setImage_src(item.image_src);
+    // setImage_src(item.image_src);
     setVideo_src(item.video_src);
   };
 
@@ -50,7 +50,7 @@ function MyVlogs() {
               </button>
             </div>
           )}
-            <h2>More on this channel</h2>
+          <h2>More on this channel</h2>
           <div className={styles.other_Videos}>
             {vlogsvideo.map((item, index) => (
               <div key={index} className={styles.gallery_Item}>
