@@ -1,4 +1,1 @@
-export const blogData = [
-  '1.mov','2.mov','3.mov'
-  
-];
+export const blogData = ["1.mp4", "2.mp4", "3.mp4"];

@@ -7,7 +7,7 @@ export default {
       img_src: "/2.webp",
     },
     {
-      vid_src: "/1.mov",
+      vid_src: "/1.mp4",
     },
     {
       img_src: "/3.webp",
@@ -16,7 +16,7 @@ export default {
       img_src: "/4.webp",
     },
     {
-      vid_src: "/2.mov",
+      vid_src: "/2.mp4",
     },
     {
       img_src: "/3.webp",
@@ -25,7 +25,7 @@ export default {
       img_src: "/4.webp",
     },
     {
-      vid_src: "/3.mov",
+      vid_src: "/3.mp4",
     },
     {
       img_src: "/3.webp",
@@ -34,7 +34,7 @@ export default {
       img_src: "/4.webp",
     },
     {
-      vid_src: "/2.mov",
+      vid_src: "/2.mp4",
     },
   ],
   line2: [
@@ -63,7 +63,7 @@ export default {
       img_src: "/12.jpg",
     },
     {
-      vid_src: "/6.mov",
+      vid_src: "/6.mp4",
     },
     {
       img_src: "/14.webp",
@@ -72,7 +72,7 @@ export default {
       img_src: "/15.webp",
     },
     {
-      vid_src: "/7.mov",
+      vid_src: "/7.mp4",
     },
   ],
   line3: [
@@ -92,7 +92,7 @@ export default {
       img_src: "/10.jpg",
     },
     {
-      vid_src: "/9.mov",
+      vid_src: "/9.mp4",
     },
     {
       img_src: "/11.jpg",

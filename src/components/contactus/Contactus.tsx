@@ -86,9 +86,9 @@ function Contactus() {
       <div className={styles.sec_main_container}>
         <div className={styles.mobiles_container} data-aos="fade-left">
           <div className={styles.first_mob}>
-            <MobileFrame video="/3.mov" />
+            <MobileFrame video="/3.mp4" />
           </div>
-          <MobileFrame video="/6.mov" />
+          <MobileFrame video="/6.mp4" />
         </div>
       </div>
     </section>

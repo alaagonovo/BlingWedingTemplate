@@ -5,7 +5,7 @@ function HeroSection() {
     <section className={styles.hero_section}>
       <div className={styles.texts}>
         <h1>NEVER MISS A THING</h1>
-        <p>Vlogging About Beauty, Fashion, Life Hacks & My Life!</p>
+        {/* <p>Vlogging About Beauty, Fashion, Life Hacks & My Life!</p> */}
       </div>
     </section>
   );

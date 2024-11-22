@@ -12,12 +12,12 @@ function About() {
         <p className={styles.line}></p>
         <div className={styles.triangle_right}></div>
       </div>
-      <p>
+      <p className={styles.first}>
         We&apos;re more than just photographers; we&apos;re storytellers
         passionate about capturing the real, raw, and timeless moments of your
         love story.
       </p>
-      <p>
+      <p className={styles.second}>
         From the first glance to the last dance, we blend artistry with
         authenticity to preserve every heartfelt detail of your wedding day. We
         believe each couple’s love is unique, and our goal is to create moments

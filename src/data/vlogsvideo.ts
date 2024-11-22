@@ -1,7 +1,7 @@
 export default [
   {
     image_src: "/11.jpg",
-    video_src: "/vlogs.mp4",
+    video_src: "/vlogs_h.mp4",
   },
   {
     image_src: "/4.webp",
@@ -13,6 +13,6 @@ export default [
   },
   {
     image_src: "/5.webp",
-    video_src: "/11.mp4",
+    video_src: "/11_h.mp4",
   },
 ];

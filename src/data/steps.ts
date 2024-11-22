@@ -17,7 +17,7 @@ export default [
       // "After our consultation, you will receive an invoice detailing your selected package, alongside our Terms and Conditions. In order to secure your date, a 30% non-refundable deposit is required.",
       // "And just to keep that little bit of excitement in the lead up to your special day, we will also grant you access to our sample content suites where you can stalk some of the magic we have created for previous lovers.",
     ],
-    vid: "/9.mov",
+    vid: "/9.mp4",
   },
   {
     title: "Step 3",

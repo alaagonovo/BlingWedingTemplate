@@ -20,6 +20,12 @@
   max-width: 748px;
   font-weight: 300;
 }
+.about_container .first {
+  margin-bottom: 2rem;
+}
+.about_container .second {
+  margin-top: 2rem;
+}
 .afterTitle {
   display: flex;
   width: fit-content;
@@ -50,7 +56,6 @@
   position: absolute;
   left: -100px;
   bottom: -4rem;
-
 }
 .image_right {
   position: absolute;
