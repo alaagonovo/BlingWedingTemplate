@@ -6,7 +6,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="main_Margin">
+    <div className="main_Margin overflow-x-hidden">
       <HeroSection />
       <MyVlogs />
       <StorySection />
