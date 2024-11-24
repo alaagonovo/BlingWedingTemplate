@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
+import Image from "next/image";
 
 function Footer() {
+  const images = ["/gallery5.png", "/gallery4.png", "/gallery3.png"];
   return (
     <footer className={styles.footer}>
       <div className={styles.main_grid_footer}>
@@ -12,9 +14,24 @@ function Footer() {
           </div>
           <div className={styles.gallery}>
             <img className={styles.mobile_Logo} src="/logo.png" alt="logo" />
-            <Link href="https://www.instagram.com/she__socials/">
-              <img src="/social.jpg" alt="social" />
-            </Link>
+            <div className={styles.images_container}>
+              {images.map((item, index) => (
+                <Link
+                  href="https://www.instagram.com/bling.weddings/"
+                  key={index}
+                >
+                  <Image
+                    src={item}
+                    width={80}
+                    height={100}
+                    objectFit="cover"
+                    alt="insta Image"
+                    objectPosition="center"
+                    quality={100}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.middle}>
