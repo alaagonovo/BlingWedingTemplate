@@ -70,6 +70,7 @@
   .main_grid .row_2_1 div,
   .main_grid .row_1_1 div {
     width: 100%;
+    overflow: hidden;
   }
 }
 @media (max-width: 850px) {
@@ -91,15 +92,26 @@
 @media (max-width: 530px) {
   .col_1_1,
   .row_1_1 {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .col_1_1,
+  /* .col_1_1,
   .row_1_1 {
     height: 800px !important;
+  } */
+  .main_grid .row_1_2 {
+    height: 400px;
+  }
+  .col_1_1 {
+    height: auto;
   }
   .col_1_1 div,
-  .row_1_1 div {
-    height: 400px;
+  .row_1_1 div,
+  .main_grid .row_1_1 {
+    height: 200px !important;
+  }
+  .main_grid .row_1_2 div,
+  .main_grid .row_2_1 div {
+    height: 200px;
   }
 }
