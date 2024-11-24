@@ -8,15 +8,14 @@ function CheckOurLastWorks() {
       <div className={styles.top_Part}>
         <div className={styles.content}>
           <div className={styles.title_Container}>
-            <h1>CHECK OUT OUR LATEST WORK!</h1>
+            <h1 data-aos="fade-right">CHECK OUT OUR LATEST WORK!</h1>
           </div>
           {latestWork.map((item, index) => (
             <LastWorkCard
-              // title={item.title}
-              // year={item.year}
               defaultImage={item.defaultImage}
               hoverImage={item.hoverImage}
               key={index}
+              index={index}
             />
           ))}
         </div>

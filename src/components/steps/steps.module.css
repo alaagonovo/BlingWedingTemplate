@@ -24,6 +24,7 @@
 .step_content {
   background-color: var(--bg-overlay-color);
   padding: 6rem 2rem;
+  overflow-x: hidden;
 }
 .step_content h1 {
   font-size: 38px;

@@ -8,7 +8,7 @@ import MobileFrame from "../ui/mobileframe/Mobile";
 function Contactus() {
   return (
     <section className={styles.main_grid_contactus}>
-      <div>
+      <div data-aos="fade-right">
         <h3>CONTACT US</h3>
         <h1>We’d love to hear from you</h1>
         <p>Our friendly team would love to hear from you.</p>

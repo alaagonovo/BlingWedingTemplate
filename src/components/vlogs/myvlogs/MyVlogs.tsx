@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import styles from "./myvlogs.module.css";
 import VideoPlayer from "@/components/ui/videoplayer/VideoPlayer";
 import "../../ui/videoplayer/common.css";
+import MainTitle from "../maintitle/MainTitle";
 interface IVideo {
   video_src: string;
   image_src: string;
@@ -19,15 +20,16 @@ function MyVlogs() {
 
   return (
     <section className={styles.main_vlog_section}>
-      <h1>MY VLOG</h1>
+      <MainTitle title="MY VLOG" />
       <div className={styles.second_pink}>
         <div className={styles.first_black}></div>
-        <div className={styles.video_Container}>
+        <div className={styles.video_Container} data-aos="zoom-in">
           {video_src ? (
             <VideoPlayer video_src={video_src} />
           ) : (
             <div
               className="video_img_Container"
+              data-aos="zoom-out"
               style={{ backgroundImage: `url(${vlogsvideo[0].image_src})` }}
             >
               <button
@@ -50,10 +52,14 @@ function MyVlogs() {
               </button>
             </div>
           )}
-          <h2>More on this channel</h2>
+          <h2 data-aos="fade-right">More on this channel</h2>
           <div className={styles.other_Videos}>
             {vlogsvideo.map((item, index) => (
-              <div key={index} className={styles.gallery_Item}>
+              <div
+                key={index}
+                className={styles.gallery_Item}
+                data-aos="zoom-out"
+              >
                 <Image
                   src={item.image_src}
                   width={200}

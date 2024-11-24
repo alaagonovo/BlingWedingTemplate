@@ -15,7 +15,9 @@ export default function Home() {
       <CheckOurLastWorks />
       <Behindtheagency />
       <Steps steps={steps} />
-      <Contactus />
+      <div id="contactus">
+        <Contactus />
+      </div>
     </main>
   );
 }

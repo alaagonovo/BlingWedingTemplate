@@ -41,7 +41,12 @@ function Blog() {
       <div className={styles.main__Cont} id="BLOG">
         <Slider {...settings}>
           {blogData.map((item, index) => (
-            <div key={index} className={styles.mobile_Container}>
+            <div
+              key={index}
+              className={styles.mobile_Container}
+              data-aos="fade-zoom-in"
+              data-aos-delay={index * 200}
+            >
               <MobileFrame video={item} />
             </div>
           ))}

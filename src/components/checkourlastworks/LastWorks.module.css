@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: repeat(4, 370px);
   gap: 44px;
+  overflow-x: hidden;
 }
 .title_Container h1 {
   font-size: 71px;

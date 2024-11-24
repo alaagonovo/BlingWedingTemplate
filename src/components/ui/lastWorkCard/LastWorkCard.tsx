@@ -3,17 +3,21 @@ import styles from "./lastworkcard.module.css";
 interface CardProps {
   // title: string;
   // year: string;
+  index: number;
   defaultImage: string;
   hoverImage: string;
 }
 const LastWorkCard: React.FC<CardProps> = ({
   // title,
   // year,
+  index,
   defaultImage,
   hoverImage,
 }) => {
   return (
     <div
+      data-aos="fade-left"
+      data-aos-delay={index * 500}
       className={styles.card}
       style={
         {

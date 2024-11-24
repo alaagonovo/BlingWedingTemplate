@@ -37,22 +37,7 @@
   margin: auto;
   overflow: hidden;
 }
-.arrow__right {
-  right: 0;
-}
-.arrow {
-  width: 57px;
-  height: 53px;
-  background: transparent;
-  position: absolute;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.arrow__left {
-  left: 0;
-}
+
 .view_All {
   display: flex;
   flex-direction: column;
