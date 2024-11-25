@@ -76,6 +76,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                   />
                 </div>
               ) : (
