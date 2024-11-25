@@ -12,7 +12,9 @@ export default function Home() {
     <main className={styles.homePage_Container}>
       <AutoSlider />
       <Blog />
-      <CheckOurLastWorks />
+      <div id="latestworks">
+        <CheckOurLastWorks />
+      </div>
       <Behindtheagency />
       <Steps steps={steps} />
       <div id="contactus">

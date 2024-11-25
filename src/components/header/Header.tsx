@@ -77,6 +77,7 @@ import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import Image from "next/image";
 import Aside from "../aside/Aside";
+import links from "@/data/links";
 
 interface LinkType {
   name: string;
@@ -84,13 +85,13 @@ interface LinkType {
   type: "internal" | "external";
 }
 
-const links: LinkType[] = [
-  { name: "ABOUT US", path: "/aboutus", type: "external" },
-  { name: "LATEST WORK", path: "/latestwork", type: "external" },
-  { name: "VLOGS", path: "/vlogs", type: "external" },
-  { name: "COUPONS", path: "/coupons", type: "external" },
-  { name: "CONTACT", path: "#contactus", type: "internal" },
-];
+// const links: LinkType[] = [
+//   { name: "ABOUT US", path: "/aboutus", type: "external" },
+//   { name: "LATEST WORK", path: "/latestwork", type: "external" },
+//   { name: "VLOGS", path: "/vlogs", type: "external" },
+//   { name: "COUPONS", path: "/coupons", type: "external" },
+//   { name: "CONTACT", path: "#contactus", type: "internal" },
+// ];
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
