@@ -19,7 +19,15 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
         />
       )}
       {vid_src && (
-        <video className={styles.video} src={vid_src} autoPlay muted loop playsInline />
+        <video
+          className={styles.video}
+          src={vid_src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/1.webp"
+        />
       )}
     </div>
   );

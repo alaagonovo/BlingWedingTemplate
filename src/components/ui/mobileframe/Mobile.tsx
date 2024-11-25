@@ -32,6 +32,7 @@ function MobileFrame({ video, image }: IMobileframe) {
             autoPlay
             muted
             playsInline
+            poster="/1.webp"
             style={commonStyle}
           />
         )}

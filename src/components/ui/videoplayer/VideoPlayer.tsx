@@ -19,6 +19,7 @@ function VideoPlayer({ video_src }: { video_src: string }) {
         ref={videoRef}
         src={video_src}
         playsInline
+        // poster="https://blocks.astratic.com/videos/general-video.mp4"
         controls
       />
     </div>
