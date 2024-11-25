@@ -81,6 +81,7 @@ function AutoCarousel({
           gap: "15px",
           padding: "20px",
           overflowX: "hidden",
+          width: "fit-content",
         }}
       >
         {Array.from({ length: 5 }).map((_, index) => (
@@ -109,26 +110,26 @@ function AutoCarousel({
               key={index}
             />
           ))}
-          {data.length < slidesToShow &&
-            Array.from({
-              length: Math.ceil(slidesToShow - data.length),
-            }).map((_, index) => (
-              <div
-                key={`placeholder-${index}`}
-                style={{
-                  width: "330px",
-                  height: "180px",
-                  background: "#d3d3d3",
-                  borderRadius: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <span style={{ color: "#888" }}>More content coming...</span>
-              </div>
-            ))}
         </Slider>
+        {/* {data.length < slidesToShow &&
+          Array.from({
+            length: Math.ceil(slidesToShow - data.length),
+          }).map((_, index) => (
+            <div
+              key={`placeholder-${index}`}
+              style={{
+                width: "330px",
+                height: "180px",
+                background: "#d3d3d3",
+                borderRadius: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ color: "#888" }}>More content coming...</span>
+            </div>
+          ))} */}
       </div>
     </section>
   );
