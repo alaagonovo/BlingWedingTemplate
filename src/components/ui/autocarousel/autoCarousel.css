@@ -4,3 +4,19 @@
     gap: 12px !important;
   }
 }
+.skeliton {
+  animation-name: skeliton_animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes skeliton_animation {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
