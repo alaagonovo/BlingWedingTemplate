@@ -19,7 +19,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
         />
       )}
       {vid_src && (
-        <video className={styles.video} src={vid_src} autoPlay muted loop />
+        <video className={styles.video} src={vid_src} autoPlay muted loop playsInline />
       )}
     </div>
   );

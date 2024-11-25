@@ -1,4 +1,3 @@
-
 import "./mobile.css";
 
 interface IMobileframe {
@@ -26,7 +25,16 @@ function MobileFrame({ video, image }: IMobileframe) {
       <p className="button right_btn"></p>
       <div className="mobile_content">
         {image && <img style={commonStyle} src={image} alt="product" />}
-        {video && <video src={video} loop autoPlay muted style={commonStyle} />}
+        {video && (
+          <video
+            src={video}
+            loop
+            autoPlay
+            muted
+            playsInline
+            style={commonStyle}
+          />
+        )}
       </div>
     </div>
   );

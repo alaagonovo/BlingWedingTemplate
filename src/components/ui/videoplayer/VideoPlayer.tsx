@@ -18,6 +18,7 @@ function VideoPlayer({ video_src }: { video_src: string }) {
         style={{ objectFit: "cover" }}
         ref={videoRef}
         src={video_src}
+        playsInline
         controls
       />
     </div>
