@@ -25,13 +25,12 @@
   background-color: #fff;
   padding-right: 1rem;
 }
-.texts h1,
+/* .texts h1, */
 .texts p {
   max-width: 350px;
 }
 .texts h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  text-align: left;
 }
 .texts p {
   line-height: 1.5;

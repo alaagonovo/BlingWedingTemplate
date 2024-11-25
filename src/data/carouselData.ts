@@ -89,13 +89,13 @@ export default {
       vid_src: "/9.mp4",
     },
     {
-      img_src: "/9.webp",
+      img_src: "/gallery3.webp",
     },
     {
-      img_src: "/10.jpg",
+      img_src: "/gallery5.webp",
     },
     {
-      vid_src: "/10.mov",
+      vid_src: "/10.mp4",
     },
     {
       img_src: "/11.jpg",
@@ -107,7 +107,7 @@ export default {
       img_src: "/12.jpg",
     },
     {
-      img_src: "/14.webp",
+      img_src: "/pretty.webp",
     },
     {
       img_src: "/15.webp",

@@ -12,7 +12,7 @@ function OnInstagrame() {
       <div className={styles.main_grid}>
         <div className={styles.row_1_2}>
           <div
-            style={{ backgroundImage: "url(/gallery5.png)" }}
+            style={{ backgroundImage: "url(/gallery5.webp)" }}
             className={styles.gallery_item}
             data-aos="fade-right"
           >
@@ -22,13 +22,13 @@ function OnInstagrame() {
             <div
               data-aos="fade-right"
               className={styles.gallery_item}
-              style={{ backgroundImage: "url(/gallery2.png)" }}
+              style={{ backgroundImage: "url(/gallery2.webp)" }}
             >
               <p>{asWeWalk}</p>
             </div>
             <div
               className={styles.gallery_item}
-              style={{ backgroundImage: "url(/gallery7.png)" }}
+              style={{ backgroundImage: "url(/gallery7.webp)" }}
             >
               <p>{asWeWalk}</p>
             </div>
@@ -38,14 +38,14 @@ function OnInstagrame() {
           <div
             data-aos="zoom-out"
             className={styles.gallery_item}
-            style={{ backgroundImage: "url(/gallery4.png)" }}
+            style={{ backgroundImage: "url(/gallery4.webp)" }}
           >
             <p>{weLoveText}</p>
           </div>
           <div
             data-aos="zoom-out"
             className={styles.gallery_item}
-            style={{ backgroundImage: "url(/gallery3.png)" }}
+            style={{ backgroundImage: "url(/gallery3.webp)" }}
           >
             <p>{asWeWalk}</p>
           </div>
@@ -55,14 +55,14 @@ function OnInstagrame() {
             <div
               data-aos="fade-left"
               className={styles.gallery_item}
-              style={{ backgroundImage: "url(/gallery6.png)" }}
+              style={{ backgroundImage: "url(/gallery6.webp)" }}
             >
               <p>{asWeWalk}</p>
             </div>
             <div
               data-aos="fade-left"
               className={styles.gallery_item}
-              style={{ backgroundImage: "url(/gallery1.png)" }}
+              style={{ backgroundImage: "url(/gallery1.webp)" }}
             >
               <p>{weLoveText}</p>
             </div>

@@ -45,7 +45,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
               )}
               <div className={styles.step_content}>
                 <div className={styles.mobile_Title}>
-                  <h1 data-aos="fade-left">{item.title}</h1>
+                  {/* <h1 data-aos="fade-left">{item.title}</h1> */}
                   <h2 data-aos="fade-left">{item.subTitle}</h2>
                 </div>
                 {item.paragraphs.map((paragraph, i) => (
@@ -59,7 +59,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
             <div className={styles.steps_grid}>
               <div className={styles.step_content}>
                 <div className={styles.mobile_Title}>
-                  <h1 data-aos="fade-right">{item.title}</h1>
+                  {/* <h1 data-aos="fade-right">{item.title}</h1> */}
                   <h2 data-aos="fade-right">{item.subTitle}</h2>
                 </div>
                 {item.paragraphs.map((paragraph, i) => (

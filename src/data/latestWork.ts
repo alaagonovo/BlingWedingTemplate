@@ -2,8 +2,8 @@ export default [
   {
     // title: "ANNU & MARY WEDDING",
     // year: "2024",
-    defaultImage: "/1.webp",
-    hoverImage: "/2.webp",
+    defaultImage: "/pretty.webp",
+    hoverImage: "/14.webp",
   },
   {
     // title: "COLE & KEMI WEDDING",

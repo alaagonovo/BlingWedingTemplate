@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 import Image from "next/image";
 
 function Footer() {
-  const images = ["/gallery5.png", "/gallery4.png", "/gallery3.png"];
+  const images = ["/gallery5.webp", "/gallery4.webp", "/gallery3.webp"];
   return (
     <footer className={styles.footer}>
       <div className={styles.main_grid_footer}>
