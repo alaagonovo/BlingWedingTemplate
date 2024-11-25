@@ -114,25 +114,25 @@ function AutoCarousel({
             />
           ))}
         </Slider>
-        {/* {data.length < slidesToShow &&
-        Array.from({
-          length: Math.ceil(slidesToShow - data.length),
-        }).map((_, index) => (
-          <div
-            key={`placeholder-${index}`}
-            style={{
-              width: "330px",
-              height: "180px",
-              background: "#d3d3d3",
-              borderRadius: "10px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <span style={{ color: "#888" }}>More content coming...</span>
-          </div>
-        ))} */}
+        {data.length < slidesToShow &&
+          Array.from({
+            length: Math.ceil(slidesToShow - data.length),
+          }).map((_, index) => (
+            <div
+              key={`placeholder-${index}`}
+              style={{
+                width: "330px",
+                height: "180px",
+                background: "#d3d3d3",
+                borderRadius: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ color: "#888" }}>More content coming...</span>
+            </div>
+          ))}
       </div>
     </section>
   );
