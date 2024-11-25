@@ -23,10 +23,11 @@
   z-index: 9;
   max-width: 160px;
   margin: 0;
-  top: -4.2rem;
+  top: -3.2rem;
   left: -3.5rem;
   font-size: 2.4rem;
   font-weight: 500;
+  line-height: 1.1;
 }
 .signature {
   font-size: 2rem;

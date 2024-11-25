@@ -17,7 +17,7 @@ const LastWorkCard: React.FC<CardProps> = ({
   return (
     <div
       data-aos="fade-left"
-      data-aos-delay={index * 500}
+      data-aos-delay={index * 200}
       className={styles.card}
       style={
         {
