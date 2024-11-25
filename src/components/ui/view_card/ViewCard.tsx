@@ -26,7 +26,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           muted
           loop
           playsInline
-          poster="/1.webp"
+          // poster="/1.webp"
         />
       )}
     </div>
