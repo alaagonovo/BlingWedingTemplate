@@ -9,6 +9,10 @@
   margin: 2rem 0;
   overflow-y: hidden;
   position: relative;
+  /****/
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .img_container {
@@ -113,4 +117,18 @@
   .bottom_cont a {
     width: 150px !important;
   }
+}
+
+.step[data-index]:nth-child(even) {
+  transform: translateX(-20px); /* For animations on even-indexed steps */
+}
+
+.step[data-index]:nth-child(odd) {
+  transform: translateX(20px); /* For animations on odd-indexed steps */
+}
+
+/* When step is visible */
+.step[data-index].visible {
+  opacity: 1;
+  transform: translateY(0);
 }
