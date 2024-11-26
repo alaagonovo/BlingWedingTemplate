@@ -5,7 +5,7 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
-const Header = React.lazy(() => import("@/components/header/Header"));
+import Header from "@/components/header/Header";
 const Footer = React.lazy(() => import("@/components/footer/Footer"));
 const WithAOS = React.lazy(() => import("@/components/withoas/WithAOS"));
 
@@ -27,6 +27,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/_next/image?url=%2F1.webp&w=750&q=75"
+        type="image/webp"
+        // Add these attributes if you know the size of the image
+        imageSrcSet="/_next/image?url=%2F1.webp&w=384&q=75 384w, /_next/image?url=%2F1.webp&w=750&q=75 750w"
+        imageSizes="(max-width: 750px) 100vw, 750px"
+      />
       <body className={nunito.className}>
         <WithAOS>
           <Header />

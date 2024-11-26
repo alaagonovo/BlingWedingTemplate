@@ -53,7 +53,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           alt="viewImage"
           width={345}
           height={195}
-          loading="lazy"
+          loading="eager"
         />
       )}
       {vid_src && (
@@ -76,11 +76,11 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           {!isLoaded && (
             <Image
               className={styles.img_Cover}
-              src={img_src || "/1.webp"} // Fallback image if img_src isn't provided
+              src={img_src || "/logo.png"} // Fallback image if img_src isn't provided
               alt="viewImage"
               width={345}
               height={195}
-              loading="lazy"
+              loading="eager"
             />
           )}
         </>
