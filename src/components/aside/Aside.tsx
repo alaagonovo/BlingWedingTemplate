@@ -61,7 +61,7 @@ import styles from "./Aside.module.css";
 import links from "@/data/links";
 import PropTypes from "prop-types";
 import Link from "next/link";
-
+import { usePathname, useRouter } from "next/navigation";
 interface LinkType {
   name: string;
   path: string;
@@ -94,10 +94,14 @@ function Aside({ isOpen, setOpen }: AsideProps) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [setOpen]);
-
+  const path = usePathname();
+  const router = useRouter();
   const handleLinkClick = (link: LinkType) => {
     if (link.type === "internal") {
       const target = document.querySelector(link.path);
+      if (path !== "/") {
+        router.push(`/${link.path}`);
+      }
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }

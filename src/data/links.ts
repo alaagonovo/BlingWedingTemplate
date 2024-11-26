@@ -1,11 +1,3 @@
-// export default [
-//   { name: "ABOUT US", path: "/aboutus" },
-//   { name: "LATEST WORK", path: "/latestwork" },
-//   { name: "VLOGS", path: "/vlogs" },
-//   { name: "COUPONS", path: "/coupons" },
-//   { name: "CONTACT", path: "#contactus" },
-// ];
-// links.ts
 interface LinkType {
   name: string;
   path: string;
@@ -13,6 +5,7 @@ interface LinkType {
 }
 
 const links: LinkType[] = [
+  { name: "HOME", path: "/", type: "external" },
   { name: "ABOUT US", path: "/aboutus", type: "external" },
   { name: "LATEST WORK", path: "#latestworks", type: "internal" },
   { name: "VLOGS", path: "/vlogs", type: "external" },

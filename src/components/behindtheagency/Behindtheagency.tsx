@@ -15,7 +15,8 @@ function Behindtheagency() {
       </div>
       <div
         style={{ overflow: "hidden" }}
-        className="flex flex-col justify-between"
+        className={styles.texts}
+       
       >
         <h2 data-aos="fade-left">
           {/* Esraa Elsayad of BLING WEDDINGS brings years of expertise to luxury

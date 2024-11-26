@@ -1,10 +1,54 @@
-import styles from "./blog.module.css";
+import React from "react";
 import { blogData } from "./data";
 import Button from "../Button/Button";
-import React from "react";
 import Slider from "react-slick";
-import MobileFrame from "../mobileframe/Mobile";
+const MobileFrame = React.lazy(() => import("../mobileframe/Mobile"));
+import styles from "./blog.module.css";
+import { CustomArrowProps } from "react-slick";
+import Image from "next/image";
+function SampleNextArrow(props: CustomArrowProps) {
+  const { onClick } = props;
+  return (
+    <div
+      className={styles.arrows}
+      style={{
+        display: "block",
+        right: "20px",
+      }}
+      onClick={onClick}
+    >
+      <Image
+        src="/svgs/nextAngle.svg"
+        width={20}
+        height={20}
+        alt="next angle"
+        loading="lazy"
+      />
+    </div>
+  );
+}
 
+function SamplePrevArrow(props: CustomArrowProps) {
+  const { onClick } = props;
+  return (
+    <div
+      className={styles.arrows}
+      onClick={onClick}
+      style={{
+        display: "block",
+        left: "20px",
+      }}
+    >
+      <Image
+        src="/svgs/prevAngle.svg"
+        width={20}
+        height={20}
+        alt="next angle"
+        loading="lazy"
+      />
+    </div>
+  );
+}
 function Blog() {
   const settings = {
     dots: false,
@@ -13,12 +57,14 @@ function Blog() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
 
     responsive: [
       {
         breakpoint: 690,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           autoplay: false,

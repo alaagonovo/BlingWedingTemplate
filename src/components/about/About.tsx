@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./about.module.css";
 
-import ViewCard from "../ui/view_card/ViewCard";
 import Image from "next/image";
 function About() {
   return (
@@ -28,10 +27,22 @@ function About() {
       </p>
       {/* <Button text="Book Your Session" link="/" /> */}
       <div className={styles.image_left} data-aos="fade-right">
-        <ViewCard img_src="/14.webp" />
+        <Image
+          src="/14.webp"
+          alt="view image"
+          width={330}
+          height={160}
+          loading="lazy"
+        />
       </div>
       <div className={styles.image_right} data-aos="fade-left">
-        <Image src="/4.webp" alt="view image" width={250} height={280} />
+        <Image
+          src="/4.webp"
+          alt="view image"
+          width={250}
+          height={280}
+          loading="lazy"
+        />
       </div>
     </div>
   );

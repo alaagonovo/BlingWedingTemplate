@@ -29,6 +29,11 @@
   font-weight: 500;
   line-height: 1.1;
 }
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: justify-between;
+}
 .signature {
   font-size: 2rem;
 }
@@ -64,11 +69,16 @@
 @media (max-width: 930px) {
   .main_behind_agency {
     grid-template-columns: 1fr;
+    margin: 2.5rem 0 1.5rem 0;
   }
 
   .img_container {
     width: 360px;
     margin: auto;
+  }
+  .texts h2,
+  .texts p {
+    margin: 1rem 0.5rem;
   }
 }
 @media (max-width: 520px) {
