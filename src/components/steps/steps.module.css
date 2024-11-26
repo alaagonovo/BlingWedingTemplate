@@ -1,6 +1,3 @@
-.main_Steps {
-  /* margin: 0 2rem; */
-}
 .steps_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
