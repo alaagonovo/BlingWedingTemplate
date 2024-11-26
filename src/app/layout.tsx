@@ -1,12 +1,13 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
-import WithAOS from "@/components/withoas/WithAOS";
+const Header = React.lazy(() => import("@/components/header/Header"));
+const Footer = React.lazy(() => import("@/components/footer/Footer"));
+const WithAOS = React.lazy(() => import("@/components/withoas/WithAOS"));
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],

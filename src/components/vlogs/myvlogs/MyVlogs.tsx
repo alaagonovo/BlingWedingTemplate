@@ -1,11 +1,13 @@
 "use client";
+import React, { useState } from "react";
 import vlogsvideo from "@/data/vlogsvideo";
 import Image from "next/image";
-import React, { useState } from "react";
 import styles from "./myvlogs.module.css";
-import VideoPlayer from "@/components/ui/videoplayer/VideoPlayer";
+const VideoPlayer = React.lazy(
+  () => import("@/components/ui/videoplayer/VideoPlayer")
+);
 import "../../ui/videoplayer/common.css";
-import MainTitle from "../maintitle/MainTitle";
+const MainTitle = React.lazy(() => import("../maintitle/MainTitle"));
 interface IVideo {
   video_src: string;
   image_src: string;

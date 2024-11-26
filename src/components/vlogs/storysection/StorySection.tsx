@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./story.module.css";
 import Link from "next/link";
-import MainTitle from "../maintitle/MainTitle";
+const MainTitle = React.lazy(() => import("../maintitle/MainTitle"));
 function StorySection() {
   return (
     <section className={styles.section_story}>

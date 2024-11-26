@@ -1,12 +1,20 @@
 "use client";
 import styles from "./page.module.css";
-import Blog from "@/components/ui/blog/Blog";
-import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
-import CheckOurLastWorks from "@/components/checkourlastworks/CheckOurLastWorks";
-import Behindtheagency from "@/components/behindtheagency/Behindtheagency";
+import React from "react";
+const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
+const AutoSlider = React.lazy(
+  () => import("@/components/about/autoSlideHero/AutoSlider")
+);
+const CheckOurLastWorks = React.lazy(
+  () => import("@/components/checkourlastworks/CheckOurLastWorks")
+);
+const Behindtheagency = React.lazy(
+  () => import("@/components/behindtheagency/Behindtheagency")
+);
 import steps from "@/data/steps";
-import Steps from "@/components/steps/Steps";
-import Contactus from "@/components/contactus/Contactus";
+const Steps = React.lazy(() => import("@/components/steps/Steps"));
+const Contactus = React.lazy(() => import("@/components/contactus/Contactus"));
+
 export default function Home() {
   return (
     <main className={styles.homePage_Container}>

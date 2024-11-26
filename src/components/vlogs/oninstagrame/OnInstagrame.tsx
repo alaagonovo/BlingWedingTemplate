@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./oninsta.module.css";
-import MainTitle from "../maintitle/MainTitle";
+const MainTitle = React.lazy(() => import("../maintitle/MainTitle"));
 function OnInstagrame() {
   const weLoveText =
     "We love a girl who knows what she wants, and for #MariahCarey it’s an emerald-cut engagement ring. 👏 Find out what she did with each sparkler—including the 35-carat diamond worth $10 million from ex-fiancé James Packerv. 💍";
