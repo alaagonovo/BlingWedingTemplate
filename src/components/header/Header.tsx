@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Headerstyle.module.css";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import Image from "next/image";
-import Aside from "../aside/Aside";
+const Aside = React.lazy(() => import("../aside/Aside"));
 import links from "@/data/links";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -102,7 +102,7 @@ const Header = () => {
             ))}
           </ul>
         </div>
-        <Aside isOpen={isOpen} setOpen={setOpen} />
+        {isOpen && <Aside isOpen={isOpen} setOpen={setOpen} />}
       </nav>
     </header>
   );
