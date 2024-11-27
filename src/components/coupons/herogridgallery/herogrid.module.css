@@ -1,0 +1,28 @@
+.main_hero_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  position: relative;
+  padding-top: 1rem;
+}
+.imageContainer {
+  height: 562px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .main_hero_grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+    padding-top: 0;
+  }
+  .main_hero_grid > :first-child {
+    margin-bottom: 0.5rem;
+  }
+  .main_hero_grid > :last-child {
+    margin-top: 0.5rem;
+  }
+  .imageContainer {
+    height: 400px;
+  }
+}

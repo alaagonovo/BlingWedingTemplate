@@ -29,11 +29,11 @@ function Footer() {
                 >
                   <Image
                     src={item}
-                    width={80}
-                    height={100}
-                    objectFit="cover"
+                    // width={80}
+                    // height={100}
                     alt="insta Image"
-                    objectPosition="center"
+                    layout="fill"
+                    objectFit="cover"
                     quality={100}
                     loading="lazy"
                   />
@@ -79,7 +79,7 @@ function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">About</Link>
+              <Link href="/aboutus">About</Link>
             </li>
             <li>
               <Link href="/">How to Work</Link>

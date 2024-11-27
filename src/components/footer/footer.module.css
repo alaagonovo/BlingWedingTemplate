@@ -38,6 +38,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
+
+  height: 100%;
+}
+.images_container a {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  min-height: 109px;
 }
 .footer ul {
   display: flex;

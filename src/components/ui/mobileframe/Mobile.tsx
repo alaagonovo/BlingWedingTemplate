@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./mobile.css";
@@ -62,20 +61,12 @@ function MobileFrame({ video, image }: IMobileframe) {
         {/* Lazy-load the video */}
         {video && isVisible && (
           <>
-            {/* {!isVideoLoaded && (
-              <img
-                src="/1.webp" // Placeholder image while the video is loading
-                alt="video placeholder"
-                style={commonStyle}
-              />
-            )} */}
             <video
               src={video}
               loop
               autoPlay
               muted
               playsInline
-              poster="/1.webp"
               style={{
                 ...commonStyle,
                 display: isVideoLoaded ? "block" : "none",
