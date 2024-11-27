@@ -12,7 +12,7 @@ const StorySection = React.lazy(
 
 function page() {
   return (
-    <div className="main_Margin overflow-x-hidden">
+    <div className="main_Margin overflow-x-hidden relative">
       <HeroSection />
       <MyVlogs />
       <StorySection />

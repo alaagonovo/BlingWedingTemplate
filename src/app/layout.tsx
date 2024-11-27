@@ -1,19 +1,29 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Nunito_Sans, Kristi } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
+
 const Header = React.lazy(() => import("@/components/header/Header"));
 const Footer = React.lazy(() => import("@/components/footer/Footer"));
 const WithAOS = React.lazy(() => import("@/components/withoas/WithAOS"));
 
+// Load Nunito Sans font
 const nunito = Nunito_Sans({
   subsets: ["latin"],
   weight: ["1000", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
 });
+
+// Load Kristi font
+const kristi = Kristi({
+  subsets: ["latin"],
+  weight: ["400"], // Kristi supports only 400 weight
+  style: ["normal"],
+});
+
 export const metadata: Metadata = {
   title: "BLING wedding",
   icons: "/logo.png",
@@ -26,14 +36,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <link
-        rel="preload"
-        as="image"
-        href="/_next/image?url=%2F14.webp&w=384&q=75"
-      />
-
-      <body className={nunito.className}>
+    <html lang="en" className={`${nunito.className} ${kristi.className}`}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2F14.webp&w=384&q=75"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body>
         <WithAOS>
           <Header />
           {children}

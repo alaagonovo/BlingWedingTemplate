@@ -13,7 +13,14 @@ function Footer() {
             <h1 data-aos="fade-up">Instagram</h1>
           </div>
           <div className={styles.gallery}>
-            <img className={styles.mobile_Logo} src="/logo.png" alt="logo" />
+            <Image
+              className={styles.mobile_Logo}
+              src="/logo.png"
+              alt="logo"
+              loading="lazy"
+              width={125}
+              height={50}
+            />
             <div className={styles.images_container}>
               {images.map((item, index) => (
                 <Link
@@ -28,6 +35,7 @@ function Footer() {
                     alt="insta Image"
                     objectPosition="center"
                     quality={100}
+                    loading="lazy"
                   />
                 </Link>
               ))}
@@ -35,7 +43,13 @@ function Footer() {
           </div>
         </div>
         <div className={styles.middle}>
-          <img src="/logo.png" alt="logo" />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={166}
+            height={72}
+            loading="lazy"
+          />
           <div style={{ marginTop: "2rem", textAlign: "center" }}>
             <span className={styles.copyright}>
               © 2024 BLING.
