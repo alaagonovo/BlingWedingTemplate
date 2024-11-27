@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ViewCard from "../view_card/ViewCard";

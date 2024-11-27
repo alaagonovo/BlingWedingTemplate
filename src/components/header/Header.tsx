@@ -81,7 +81,7 @@ const Header = () => {
               alt="logo"
               width={160}
               height={71}
-              loading="eager"
+              loading="lazy"
             />
           </div>
         </Link>
@@ -115,5 +115,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// export default Header;

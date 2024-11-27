@@ -53,7 +53,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           alt="viewImage"
           width={345}
           height={195}
-          loading="eager"
+          loading="lazy"
         />
       )}
       {vid_src && (
@@ -80,7 +80,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
               alt="viewImage"
               width={345}
               height={195}
-              loading="eager"
+              loading="lazy"
             />
           )}
         </>
