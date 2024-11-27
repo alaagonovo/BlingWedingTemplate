@@ -67,11 +67,20 @@ function AutoCarousel({
     slidesToShow,
     slidesToScroll: 1, // Smooth scrolling, one item at a time
     autoplay: true,
-    speed: 5000, // Adjust for smooth infinite scrolling
+    speed: 7000, // Default speed
     autoplaySpeed: 1000, // Constant scroll with linear ease
     cssEase: "linear",
     rtl: reverse || false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile breakpoint (adjust as needed)
+        settings: {
+          speed: 10000,
+          autoplaySpeed: 2000, // Speed for mobile
+        },
+      },
+    ],
   };
 
   // Skeleton loader while data is being processed
@@ -114,7 +123,7 @@ function AutoCarousel({
             />
           ))}
         </Slider>
-        {data.length < slidesToShow &&
+        {/* {data.length < slidesToShow &&
           Array.from({
             length: Math.ceil(slidesToShow - data.length),
           }).map((_, index) => (
@@ -132,7 +141,7 @@ function AutoCarousel({
             >
               <span style={{ color: "#888" }}>More content coming...</span>
             </div>
-          ))}
+          ))} */}
       </div>
     </section>
   );
