@@ -2,8 +2,9 @@
 import styles from "./page.module.css";
 import React from "react";
 const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
-import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
-
+const AutoSlider = React.lazy(
+  () => import("@/components/about/autoSlideHero/AutoSlider")
+);
 const CheckOurLastWorks = React.lazy(
   () => import("@/components/checkourlastworks/CheckOurLastWorks")
 );

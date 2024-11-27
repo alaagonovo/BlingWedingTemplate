@@ -61,8 +61,8 @@ const Header = () => {
             <Image
               src="/svgs/location.svg"
               alt="location"
-              width={8}
-              height={8}
+              width={10}
+              height={10}
               loading="lazy"
             />
           </span>
@@ -76,13 +76,7 @@ const Header = () => {
         </div>
         <Link href="/" passHref>
           <div className={styles.logo}>
-            <Image
-              src="/logo.png"
-              alt="logo"
-              width={160}
-              height={71}
-              loading="lazy"
-            />
+            <Image src="/logo.png" alt="logo" width={160} height={71} />
           </div>
         </Link>
         <div className={styles.links_Container}>
@@ -115,3 +109,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// export default Header;

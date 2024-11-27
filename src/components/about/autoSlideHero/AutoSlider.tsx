@@ -1,6 +1,8 @@
 import React from "react";
 import carouselData from "@/data/carouselData";
-import AutoCarousel from "@/components/ui/autocarousel/AutoCarousel";
+const AutoCarousel = React.lazy(
+  () => import("@/components/ui/autocarousel/AutoCarousel")
+);
 
 function AutoSlider() {
   return (
