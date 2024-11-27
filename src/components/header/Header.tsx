@@ -63,7 +63,7 @@ const Header = () => {
               alt="location"
               width={10}
               height={10}
-              loading="lazy"
+              loading="eager"
             />
           </span>
           Servicing social magic across the world | Destination Weddings
@@ -76,7 +76,13 @@ const Header = () => {
         </div>
         <Link href="/" passHref>
           <div className={styles.logo}>
-            <Image src="/logo.png" alt="logo" width={160} height={71} />
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={160}
+              height={71}
+              loading="eager"
+            />
           </div>
         </Link>
         <div className={styles.links_Container}>

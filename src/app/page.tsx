@@ -1,10 +1,9 @@
 "use client";
 import styles from "./page.module.css";
 import React from "react";
+import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
 const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
-const AutoSlider = React.lazy(
-  () => import("@/components/about/autoSlideHero/AutoSlider")
-);
+
 const CheckOurLastWorks = React.lazy(
   () => import("@/components/checkourlastworks/CheckOurLastWorks")
 );

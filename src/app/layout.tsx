@@ -27,6 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link
+        rel="preload"
+        as="image"
+        href="/_next/image?url=%2F14.webp&w=384&q=75"
+      />
+
       <body className={nunito.className}>
         <WithAOS>
           <Header />

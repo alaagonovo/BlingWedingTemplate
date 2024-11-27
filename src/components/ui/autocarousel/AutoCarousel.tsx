@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-const ViewCard = React.lazy(() => import("../view_card/ViewCard"));
+import ViewCard from "../view_card/ViewCard";
 import "./autoCarousel.css";
 
 interface IAutoCarousel {
@@ -77,7 +77,7 @@ function AutoCarousel({
         breakpoint: 768, // Mobile breakpoint (adjust as needed)
         settings: {
           speed: 10000,
-          autoplaySpeed: 2000, // Speed for mobile
+          autoplaySpeed: 0, // Speed for mobile
         },
       },
     ],
@@ -123,25 +123,6 @@ function AutoCarousel({
             />
           ))}
         </Slider>
-        {/* {data.length < slidesToShow &&
-          Array.from({
-            length: Math.ceil(slidesToShow - data.length),
-          }).map((_, index) => (
-            <div
-              key={`placeholder-${index}`}
-              style={{
-                width: "330px",
-                height: "180px",
-                background: "#d3d3d3",
-                borderRadius: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <span style={{ color: "#888" }}>More content coming...</span>
-            </div>
-          ))} */}
       </div>
     </section>
   );

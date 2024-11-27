@@ -2,6 +2,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./mobile.css";
+import Image from "next/image";
 
 interface IMobileframe {
   video?: string;
@@ -55,19 +56,19 @@ function MobileFrame({ video, image }: IMobileframe) {
       <div className="mobile_content">
         {/* Lazy-load the image */}
         {image && isVisible && (
-          <img style={commonStyle} src={image} alt="product" loading="lazy" />
+          <Image style={commonStyle} src={image} alt="product" loading="lazy" />
         )}
 
         {/* Lazy-load the video */}
         {video && isVisible && (
           <>
-            {!isVideoLoaded && (
+            {/* {!isVideoLoaded && (
               <img
                 src="/1.webp" // Placeholder image while the video is loading
                 alt="video placeholder"
                 style={commonStyle}
               />
-            )}
+            )} */}
             <video
               src={video}
               loop
