@@ -20,7 +20,7 @@ function CardCoupon({ data }: { data: string[] }) {
         width={100}
         height={100}
         alt="coupon view"
-        quality={10}
+        quality={80}
         unoptimized={true}
       />
       {/* )} */}
