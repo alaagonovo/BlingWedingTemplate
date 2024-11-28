@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.46.2",
     "aos": "^2.3.4",
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
