@@ -1,28 +1,29 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
 import styles from "./herogrid.module.css";
-function HeroCoupons() {
-  const heroImages = [
-    "/gallery4.webp",
-    "/gallery1.webp",
-    "/gallery5.webp",
-    "/storyvlog.png",
-  ];
+import { Tables } from "../../../../database.types";
+import HeroCard from "./heroCard/HeroCard";
+function HeroCoupons({ data }: { data: Tables<"vendors">[] }) {
   return (
     <section className={styles.main_hero_grid}>
-      {heroImages.map((item, index) => (
-        <div className={styles.imageContainer} key={index}>
-          <Image
-            src={item} // Replace with your image path
-            alt="coupon banner"
-            layout="fill"
-            objectFit="cover" // Ensures the image covers the container
-            priority // Optional: Preload the image for faster LCP
-          />
-        </div>
+      {data?.map((item, index) => (
+        <HeroCard item={item} key={index} />
       ))}
+      {/* /* render seclaton* */}
+      {data.length === 0 &&
+        Array.from({ length: 4 }).map((_, index) => (
+          <div
+            key={index}
+            style={{
+              width: "100%",
+              height: "560px",
+              background: "#e0e0e0",
+            }}
+            className="skeliton"
+          ></div>
+        ))}
     </section>
   );
 }
-
 export default HeroCoupons;

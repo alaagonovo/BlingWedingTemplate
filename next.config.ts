@@ -14,8 +14,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    
+  experimental: {},
+  images: {
+    domains: ["xcmumwwxdumpgaqwyavz.supabase.co"], // Add your external domain here
   },
 };
 

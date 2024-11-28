@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
-
+import styles from "./homeTitle.module.css";
 function HomeTitle() {
   return (
-    <div>
+    <div className={styles.title_Container}>
       <h1>
-        ready to ready to grow?
+        ready to grow?
         <Link href="/#contactus">LET&apos;S CONNECT!</Link>
       </h1>
     </div>

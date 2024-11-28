@@ -38,6 +38,22 @@ img {
 .main_Margin {
   margin-top: 105px;
 }
+.skeliton {
+  animation-name: skeliton_animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes skeliton_animation {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 440px) {
   .slick-slide > div {
     display: flex;
