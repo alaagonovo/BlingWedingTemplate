@@ -16,7 +16,7 @@ function CardCoupon({ data }: { data: string[] }) {
     <div className={styles.card_container} ref={elementRef}>
       {isVisible && (
         <Image
-          src={data[Index] || data[0]}
+          src={data[Index] || data[0] || data[1] || data[2] || data[3]}
           width={100}
           height={100}
           alt="coupon view"
