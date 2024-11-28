@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./cardcoupone.module.css";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+// import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 function CardCoupon({ data }: { data: string[] }) {
   //   const { isVisible, elementRef } = useIntersectionObserver();
   const [Index, setIndex] = useState<number>(0);
