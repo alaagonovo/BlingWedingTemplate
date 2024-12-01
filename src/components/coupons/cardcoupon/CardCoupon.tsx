@@ -1,41 +1,3 @@
-// import Image from "next/image";
-// import React, { useEffect, useState } from "react";
-// import styles from "./cardcoupone.module.css";
-// import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-// function CardCoupon({ data }: { data: string[] }) {
-//   const { isVisible, elementRef } = useIntersectionObserver();
-//   const [Index, setIndex] = useState<number>(0);
-
-//   useEffect(() => {
-//     if (!isVisible || data.length === 0) return; // No images to display
-
-//     const timer = setInterval(() => {
-//       if (Index <= 3) {
-//         setIndex((prevIndex) => (prevIndex + 1) % data.length);
-//       } else {
-//         setIndex(0);
-//       }
-//     }, 700);
-//     // Cleanup timer on unmount
-//     return () => clearInterval(timer);
-//   }, [data, Index, isVisible]);
-//   return (
-//     <div className={styles.card_container} ref={elementRef}>
-//       {/* {isVisible && ( */}
-//       <Image
-//         src={data[Index] || data[0]}
-//         width={100}
-//         height={100}
-//         alt="coupon view"
-//         quality={80}
-//         unoptimized={true}
-//       />
-//       {/* )} */}
-//     </div>
-//   );
-// }
-
-// export default CardCoupon;
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import styles from "./cardcoupone.module.css";
@@ -57,8 +19,8 @@ const CardCoupon: React.FC<CardCouponProps> = ({
   data,
   altTexts = [],
 
-  minInterval = 1500, // Minimum 500ms
-  maxInterval = 3500, // Maximum 2000ms
+  minInterval = 1500,
+  maxInterval = 3500,
 }) => {
   const { isVisible, elementRef } = useIntersectionObserver();
   const [index, setIndex] = useState<number>(0);
@@ -101,6 +63,7 @@ const CardCoupon: React.FC<CardCouponProps> = ({
           quality={80}
           unoptimized={true} // Enable optimization
           className={styles.coupon_image}
+          loading="lazy"
         />
         // </div>
       )}

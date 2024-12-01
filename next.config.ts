@@ -16,7 +16,13 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {},
   images: {
-    domains: ["xcmumwwxdumpgaqwyavz.supabase.co"], // Add your external domain here
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "xcmumwwxdumpgaqwyavz.supabase.co",
+        pathname: "/storage/v1/object/public/**",
+      },
+    ],
   },
 };
 

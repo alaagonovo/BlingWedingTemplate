@@ -36,6 +36,6 @@ export default [
       // "It is time to take a deep breath and know that we will be there with you, capturing all of those forever moments on our latest iPhone.",
       // "Before we leave for the night, we will swiftly airdrop your perfectly curated camera roll of candid moments and yes, that does mean you get to instantly relive every single incredible moment on YOUR WEDDING NIGHT.",
     ],
-    img: "/7.jpg",
+    img: "/7.webp",
   },
 ];

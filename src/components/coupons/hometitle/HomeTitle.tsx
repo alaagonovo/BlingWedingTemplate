@@ -5,8 +5,7 @@ function HomeTitle() {
   return (
     <div className={styles.title_Container}>
       <h1>
-        ready to grow?
-        <Link href="/#contactus">LET&apos;S CONNECT!</Link>
+        READY TO GROW ?<Link href="/#contactus">LET&apos;S CONNECT!</Link>
       </h1>
     </div>
   );

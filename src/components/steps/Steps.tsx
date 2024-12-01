@@ -32,7 +32,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
         setVisibleIndexes(updatedIndexes);
       },
       {
-        threshold: 0.1, // Trigger when 10% of the element is visible
+        threshold: 0, // Trigger when 10% of the element is visible
       }
     );
 

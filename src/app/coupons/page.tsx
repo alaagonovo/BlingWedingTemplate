@@ -25,7 +25,9 @@ function Page() {
     <div className="main_Margin">
       <HeroCoupons data={vendors?.slice(4, 8) || []} />
       <HomeTitle />
-      <OtherCoupons data={vendors?.slice(4, vendors.length) || []} />
+      <OtherCoupons
+        data={vendors?.slice(0, 4).concat(vendors?.slice(8)) || []}
+      />
     </div>
   );
 }
