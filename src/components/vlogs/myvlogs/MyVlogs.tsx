@@ -22,7 +22,7 @@ function MyVlogs() {
     <section className={styles.main_vlog_section}>
       <MainTitle title="MY VLOG" />
       <div className={styles.second_pink}>
-        <div className={styles.first_black}></div>
+        {/* <div className={styles.first_black}></div> */}
         <div className={styles.video_Container} data-aos="zoom-in">
           {video_src ? (
             <VideoPlayer video_src={video_src} />

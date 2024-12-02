@@ -1,6 +1,6 @@
 .title_Container {
   background: black;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0;
   padding: 1.5rem 0.5rem;
 }
 .title_Container h1 {
@@ -13,6 +13,7 @@
 .title_Container h1 a {
   font-size: 1rem;
   margin-inline-start: 1rem;
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
   .title_Container h1 {

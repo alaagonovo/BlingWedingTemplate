@@ -1,16 +1,16 @@
 .video_img_Container {
-  width: 920px;
+  width: 100%;
   margin: auto;
-  height: 500px;
+  height: 600px;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media (max-width: 1220px) {
-  .video_img_Container {
+  /* .video_img_Container {
     width: 92%;
-  }
+  } */
 }
 @media (max-width: 620px) {
   .video_img_Container {
