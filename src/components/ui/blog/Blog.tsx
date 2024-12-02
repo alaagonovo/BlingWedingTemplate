@@ -104,8 +104,8 @@ function Blog() {
         data-aos-easing="ease-in-back"
         data-aos-offset="0"
       >
-        <h1>Explore Our</h1>
-        <Button link="/packages" text="COUPONS" />
+        {/* <h1>Explore Our</h1> */}
+        <Button link="/packages" text="EXPLORE COUPONS" />
       </div>
     </section>
   );

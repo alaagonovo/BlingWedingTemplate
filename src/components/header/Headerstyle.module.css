@@ -31,7 +31,7 @@
 }
 .logo {
   position: relative;
-  left: 151px;
+  left: 70px;
 }
 .logo img {
   width: 160px;
@@ -50,7 +50,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 650px;
+  width: 515px;
 }
 .links_List a {
   padding: 10px 22px;

@@ -32,10 +32,16 @@
 .texts {
   display: flex;
   flex-direction: column;
-  justify-content: justify-between;
+  justify-content: space-between;
+}
+.main_behind_agency p {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 .signature {
-  font-size: 2rem;
+  font-size: 2rem !important;
+  font-weight: 700;
 }
 .signature span {
   font-family: "Kristi", cursive;
@@ -43,12 +49,9 @@
   font-size: 2rem;
 }
 .main_behind_agency h2 {
-  font-size: 1.4rem;
-  margin: 3rem 0;
-}
-.main_behind_agency p {
-  margin: 3rem 0;
-  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 2rem 0;
 }
 .img_container {
   position: relative;
@@ -66,6 +69,11 @@
     grid-template-columns: 1fr 1.5fr;
   }
 }
+@media (max-width: 1110px) {
+  .signature {
+    margin: 0 !important;
+  }
+}
 @media (max-width: 930px) {
   .main_behind_agency {
     grid-template-columns: 1fr;
@@ -81,9 +89,27 @@
     margin: 1rem 0.5rem;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 691px) {
+  .texts h2 {
+    font-size: 1.2rem;
+  }
+  .texts p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .texts .signature {
+    font-size: 1.05rem !important;
+  }
+  .texts .signature span {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 550px) {
   .title_Container h1 {
     left: 0.1rem;
+  }
+  .title_Container h2 {
+    font-size: 1.1rem;
   }
   .main_behind_agency {
     width: 100%;

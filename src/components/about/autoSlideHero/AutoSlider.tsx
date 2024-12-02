@@ -13,7 +13,7 @@ function AutoSlider() {
           Artfully Capturing Memories
         </h1>
         <p
-          className="text-center  text-sm md:text-base  mx-auto mb-6 max-w-[900px]"
+          className="text-center  text-sm md:text-lg  mx-auto mb-6 max-w-[950px]"
           data-aos="zoom-in"
         >
           There’s nothing more incredible than finding the one person you can’t

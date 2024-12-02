@@ -34,16 +34,16 @@
 }
 .step_content h2 {
   font-size: 38px;
-  font-weight: 200;
+  font-weight: 500;
   margin-inline-start: 2.5rem;
   margin-bottom: 2.5rem;
 }
 .step_content p {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   font-family: "Nunito Sans", sans-serif;
   margin: 1rem 0;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-inline-start: 2.5rem;
   max-width: 416px;
 }
@@ -94,7 +94,8 @@
     padding: 1.5rem;
   }
 
-  .step_content p {
+  .step_content p,
+  .step_content h2 {
     margin-inline-start: 0;
   }
   .bottom_cont {

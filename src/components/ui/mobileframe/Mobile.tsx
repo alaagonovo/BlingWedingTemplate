@@ -20,7 +20,9 @@ function MobileFrame({ video, image }: IMobileframe) {
         setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.1, // Load when 10% of the component is visible
+        root: null,
+        rootMargin: "500px 0px",
+        threshold: 0, // Load when 10% of the component is visible
       }
     );
 
