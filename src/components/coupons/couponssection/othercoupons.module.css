@@ -19,8 +19,8 @@
   .coupons_main_grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 10px;
-    gap: 5px;
+    padding: 2px;
+    gap: 2px;
   }
 }
 /* @media (max-width: 586px) {
