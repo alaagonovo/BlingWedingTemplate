@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import styles from "./cardcoupone.module.css";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import Link from "next/link";
 
 interface CardCouponProps {
   data: string[];
@@ -55,16 +56,18 @@ const CardCoupon: React.FC<CardCouponProps> = ({
     <div className={styles.card_container} ref={elementRef}>
       {isVisible && data.length > 0 && (
         // <div className={styles.image_wrapper}>
-        <Image
-          src={data[index]}
-          width={100}
-          height={100}
-          alt={altText}
-          quality={80}
-          unoptimized={true} // Enable optimization
-          className={styles.coupon_image}
-          loading="lazy"
-        />
+        <Link href="/payment">
+          <Image
+            src={data[index]}
+            width={100}
+            height={100}
+            alt={altText}
+            quality={80}
+            unoptimized={true} // Enable optimization
+            className={styles.coupon_image}
+            loading="lazy"
+          />
+        </Link>
         // </div>
       )}
     </div>

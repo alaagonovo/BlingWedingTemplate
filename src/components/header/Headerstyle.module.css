@@ -50,19 +50,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 515px;
+  width: 700px;
 }
 .links_List a {
   padding: 10px 22px;
   margin: 4px;
   background: rgba(247, 247, 247, 0);
   display: block;
-  font-size: 11px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--color-links-header);
+  transition: all 0.5s;
 }
 .links_List a:hover {
-  color: var(--color-links-hover);
+  /* color: var(--color-links-hover); */
+  font-weight: 800;
+  text-decoration: underline;
 }
 .active {
   color: var(--color-links-hover) !important;

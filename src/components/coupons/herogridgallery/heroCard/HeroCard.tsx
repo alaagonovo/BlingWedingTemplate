@@ -51,8 +51,8 @@ function HeroCard({ item }: { item: Tables<"vendors"> }) {
             width={100}
             height={100}
             unoptimized={true}
+            // sizes=" (max-width: 769px) 100vw,50vw"
             priority
-            // loading="eager"
           />
         )
       }

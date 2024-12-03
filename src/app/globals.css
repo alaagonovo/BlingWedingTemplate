@@ -43,6 +43,20 @@ img {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+/**Forms Style**/
+.country-list {
+  display: flex;
+  flex-direction: column;
+}
+.react-tel-input input {
+  width: 100% !important;
+  height: 42px !important;
+  background-color: rgb(249 250 251) !important;
+}
+
+form button {
+  background-color: var(--color-links-hover) !important;
+}
 @keyframes skeliton_animation {
   0% {
     opacity: 1;

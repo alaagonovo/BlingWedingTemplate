@@ -16,11 +16,13 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {},
   images: {
+    domains: ["flagcdn.com"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "xcmumwwxdumpgaqwyavz.supabase.co",
-        pathname: "/storage/v1/object/public/**",
+        pathname: "/w20/**",
+        // pathname: "/storage/v1/object/public/**",
       },
     ],
   },

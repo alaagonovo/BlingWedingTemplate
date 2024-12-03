@@ -2,7 +2,7 @@ import React from "react";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import "./contactus.css";
+// import "./contactus.css";
 import styles from "./contactus.module.css";
 import MobileFrame from "../ui/mobileframe/Mobile";
 function Contactus() {

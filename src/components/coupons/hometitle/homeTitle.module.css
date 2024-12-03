@@ -20,4 +20,7 @@
     flex-direction: column;
     font-size: 8vw;
   }
+  .title_Container h1 a {
+    margin-inline-start: 0;
+  }
 }
