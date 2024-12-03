@@ -61,7 +61,8 @@ const CardCoupon: React.FC<CardCouponProps> = ({
             data-aos="fade-left"
             className="absolute bg-red-500 bg-opacity-85 py-1 px-2 text-white text-sm font-thin sm:font-medium sm:text-base top-2 sm:top-8 right-0"
           >
-            {discount}% OFF
+            <span className="inline sm:hidden">-</span>
+            {discount}% <span className="hidden sm:inline">OFF</span>
           </p>
 
           <Link href="/payment">
