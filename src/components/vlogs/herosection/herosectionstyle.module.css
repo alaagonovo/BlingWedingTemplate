@@ -3,8 +3,8 @@
   margin: auto;
   height: 100vh;
   position: relative;
-  background-image: url("/vlogsHero.png");
-  background-position: center;
+  background-image: url("/vlogsView.webp");
+  background-position: center 60%;
   background-size: cover;
   background-attachment: fixed; /* Default for non-iOS devices */
 }
