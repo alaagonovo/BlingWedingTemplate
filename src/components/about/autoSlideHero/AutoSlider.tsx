@@ -7,7 +7,7 @@ function AutoSlider() {
     <section className="flex flex-col gap-2 mt-4 md:mt-0">
       <div className="max-w-[1077px] mx-auto mt-2 mb-12 px-5 text-center hidden md:block">
         <h1
-          className="text-center font-extrabold my-12   md:text-6xl xl:text-7xl"
+          className="text-center font-extrabold my-12   md:text-6xl xl:text-[4.7rem]"
           data-aos="zoom-out"
         >
           Artfully Capturing Memories
