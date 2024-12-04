@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../herogrid.module.css";
 import { Tables } from "../../../../../database.types";
+import Link from "next/link";
+
 // import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 function HeroCard({ item }: { item: Tables<"vendors"> }) {
@@ -43,19 +45,24 @@ function HeroCard({ item }: { item: Tables<"vendors"> }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {
-        /*isVisible &&*/ item.images && (
-          <Image
-            src={item.images[currentImageIndex]}
-            alt="coupon banner"
-            width={100}
-            height={100}
-            unoptimized={true}
-            // sizes=" (max-width: 769px) 100vw,50vw"
-            priority
-          />
-        )
-      }
+      <Link href="/payment" className="relative">
+        <div className={`${styles.coupon_div} bg-red-500 bg-opacity-75 `}>
+          -{item.discount}%
+        </div>
+        {
+          /*isVisible &&*/ item.images && (
+            <Image
+              src={item.images[currentImageIndex]}
+              alt="coupon banner"
+              width={100}
+              height={100}
+              unoptimized={true}
+              // sizes=" (max-width: 769px) 100vw,50vw"
+              priority
+            />
+          )
+        }
+      </Link>
     </div>
   );
 }
