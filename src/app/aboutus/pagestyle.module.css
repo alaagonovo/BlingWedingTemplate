@@ -21,3 +21,8 @@
     justify-items: center;
   }
 }
+@media (max-width: 1144px) {
+  .top_cont {
+    display: none;
+  }
+}
