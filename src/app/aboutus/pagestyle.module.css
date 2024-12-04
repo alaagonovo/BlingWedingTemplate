@@ -1,11 +1,13 @@
 .top_cont {
+  margin-top: 7rem;
   background-color: var(--color-light-pink);
   height: 2rem;
 }
 .main_about {
-  margin: 7rem 0;
+  margin-top: 7rem 0;
   position: relative;
   background-color: var(--color-light-pink);
+  padding-bottom: 5rem;
 }
 .category_grid {
   display: grid;
