@@ -66,6 +66,11 @@
   .imageContainer {
     height: 400px;
   }
+  .coupon_div {
+    height: 40px;
+    width: 40px;
+    font-size: 0.85rem;
+  }
 }
 @keyframes image--Animation {
   0% {
