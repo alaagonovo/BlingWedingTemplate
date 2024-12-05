@@ -14,7 +14,6 @@ function Page() {
     if (error) {
       console.error("Error fetching price lists:", error);
     } else {
-      console.log("Price lists fetched:", data);
       setVendors(data);
     }
   };
