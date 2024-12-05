@@ -13,16 +13,25 @@ function PaymentForm() {
     first_name: "",
     last_name: "",
     email: "",
-    phone: "1064182529",
+    phone: "01064182529",
     country: "Egypt",
     city: "",
     street: "",
   });
+  // const handleChange = (
+  //   e: any
+  //   // React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   setForm({ ...form, [e.target.name]: e.target.value });
+  // };
   const handleChange = (
-    e: any
+    // e: any
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     // React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+    setForm({ ...form, [target.name]: target.value });
+    // setForm({ ...form, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -121,17 +130,31 @@ function PaymentForm() {
             inputClass="w-full p-2 border border-gray-300 bg-gray-50 rounded-md focus:ring-blue-500 focus:border-blue-500 "
             dropdownClass="custom-dropdown"
             value={form.phone}
-            onChange={(e: any) => {
+            // onChange={(e: any) => {
+            //   // console.log(e);
+            //   handleChange({ target: { name: "phone", value: e } });
+            // }}
+            onChange={(value: string) => {
               // console.log(e);
-              handleChange({ target: { name: "phone", value: e } });
+              handleChange({
+                target: { name: "phone", value },
+              } as React.ChangeEvent<HTMLInputElement>);
+              // handleChange({ target: { name: "phone", value: e } });
             }}
           />
         </div>
         {/* city and street */}
         <div className="grid gap-6  md:grid-cols-2">
           <CountrySelector
-            onChange={(e: any) => {
-              handleChange({ target: { name: "country", value: e } });
+            // onChange={(e: any) => {
+            //   handleChange({ target: { name: "country", value: e } });
+            // }}
+            onChange={(value: string | undefined) => {
+              // console.log(e);
+              handleChange({
+                target: { name: "phone", value },
+              } as React.ChangeEvent<HTMLInputElement>);
+              // handleChange({ target: { name: "phone", value: e } });
             }}
           />
           <div>
