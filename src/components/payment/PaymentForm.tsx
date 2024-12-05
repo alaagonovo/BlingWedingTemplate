@@ -37,7 +37,7 @@ function PaymentForm() {
     e.preventDefault();
     emailjs
       .send(
-        "service_emksni9",
+        "service_5tz6yw8",
         "template_hr20fcs",
         { ...form },
         // (formDataRef as any).current,

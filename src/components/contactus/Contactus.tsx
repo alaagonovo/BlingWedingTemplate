@@ -6,11 +6,13 @@ import "react-phone-input-2/lib/style.css";
 import styles from "./contactus.module.css";
 import MobileFrame from "../ui/mobileframe/Mobile";
 import emailjs from "@emailjs/browser";
+import { Label, TextInput } from "flowbite-react";
 function Contactus() {
   const formDataRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({
     first_name: "",
     last_name: "",
+    email: "",
     phone: "",
     message: "",
   });
@@ -28,7 +30,7 @@ function Contactus() {
     e.preventDefault();
     emailjs
       .send(
-        "service_emksni9",
+        "service_5tz6yw8",
         "template_4m22yrb",
         { ...form },
         // (formDataRef as any).current,
@@ -89,6 +91,20 @@ function Contactus() {
                 required
               />
             </div>
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="email1" value="Your email" />
+            </div>
+            <TextInput
+              id="email1"
+              type="email"
+              placeholder="name@flowbite.com"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div>
             <label
