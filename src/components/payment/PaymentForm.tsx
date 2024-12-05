@@ -1,18 +1,59 @@
 "use client";
 import { Label, TextInput } from "flowbite-react";
-import React from "react";
+import React, { useRef, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import CountrySelector from "./selectcountry/SelectCountry";
 import Checkbox from "./checkbox/Checkbox";
 import styles from "./paymentformstyle.module.css";
-
+import emailjs from "@emailjs/browser";
 function PaymentForm() {
+  const formDataRef = useRef<HTMLFormElement | null>(null);
+  const [form, setForm] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "1064182529",
+    country: "Egypt",
+    city: "",
+    street: "",
+  });
+  const handleChange = (
+    e: any
+    // React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_emksni9",
+        "template_hr20fcs",
+        { ...form },
+        // (formDataRef as any).current,
+        {
+          publicKey: "N9qLzL2P3X7Rut2Mp",
+        }
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+        },
+        (error) => {
+          console.error("Failed to send email:", error.text);
+        }
+      );
+  };
   return (
     <div className={styles.payment__main__grid}>
       <h1>Payments Details</h1>
       <p>Complete your purchase by providing your payment details.</p>
-      <form className="flex max-w-md flex-col gap-4">
+      <form
+        ref={formDataRef}
+        onSubmit={handleSubmit}
+        className="flex max-w-md flex-col gap-4"
+      >
         {/* First Name && last Name */}
         <div className="grid gap-6  md:grid-cols-2">
           <div>
@@ -27,6 +68,9 @@ function PaymentForm() {
               id="first_name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
               placeholder="John"
+              value={form.first_name}
+              onChange={handleChange}
+              name="first_name"
               required
             />
           </div>
@@ -42,6 +86,9 @@ function PaymentForm() {
               id="last_name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
               placeholder="Doe"
+              value={form.last_name}
+              onChange={handleChange}
+              name="last_name"
               required
             />
           </div>
@@ -55,6 +102,9 @@ function PaymentForm() {
             id="email1"
             type="email"
             placeholder="name@flowbite.com"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -68,14 +118,22 @@ function PaymentForm() {
           </label>
           <PhoneInput
             country={"us"}
-            value="515 525 56"
             inputClass="w-full p-2 border border-gray-300 bg-gray-50 rounded-md focus:ring-blue-500 focus:border-blue-500 "
             dropdownClass="custom-dropdown"
+            value={form.phone}
+            onChange={(e: any) => {
+              // console.log(e);
+              handleChange({ target: { name: "phone", value: e } });
+            }}
           />
         </div>
         {/* city and street */}
         <div className="grid gap-6  md:grid-cols-2">
-          <CountrySelector />
+          <CountrySelector
+            onChange={(e: any) => {
+              handleChange({ target: { name: "country", value: e } });
+            }}
+          />
           <div>
             <label
               htmlFor="city"
@@ -88,6 +146,8 @@ function PaymentForm() {
               type="text"
               sizing="md"
               style={{ backgroundColor: "white" }}
+              name="city"
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -104,7 +164,9 @@ function PaymentForm() {
             type="text"
             sizing="sm"
             style={{ backgroundColor: "white" }}
-            placeholder="Street432....."
+            name="street"
+            onChange={handleChange}
+            placeholder="Street 432 ....."
           />
         </div>
         {/*Payment Method */}
@@ -120,15 +182,12 @@ function PaymentForm() {
           </div>
         </div>
         <div className="flex justify-between">
-          <h4 className="text-base text-black">Coupon Price:</h4>
+          <h4 className="text-base text-black">Coupon Booklet Price:</h4>
           <h4 className="font-extrabold" style={{ color: "#6c5656" }}>
             3000 EGP
           </h4>
         </div>
-        <button
-          type="submit"
-          className="text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
+        <button className="text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Submit Your Request
         </button>
       </form>

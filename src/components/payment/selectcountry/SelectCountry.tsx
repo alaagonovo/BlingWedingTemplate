@@ -126,8 +126,8 @@ const getFlagImageUrl = (countryCode: string) => {
   return "";
 };
 
-function CountrySelector() {
-  const [value, setValue] = useState<CountryOption | null>(null);
+function CountrySelector({ onChange }: { onChange: (e: any) => void }) {
+  const [valueSelected, setValue] = useState<CountryOption | null>(null);
 
   // Enhance options to include flag images
   const options = useMemo<CountryOption[]>(() => {
@@ -144,6 +144,7 @@ function CountrySelector() {
   // Handle option selection
   const changeHandler = (selectedOption: CountryOption | null) => {
     setValue(selectedOption);
+    onChange(selectedOption?.label );
   };
 
   // Set default value to Egypt
@@ -164,9 +165,10 @@ function CountrySelector() {
       </label>
       <Select
         options={options}
-        value={value}
+        value={valueSelected}
         onChange={changeHandler}
         placeholder="Select a country"
+        name="country"
         styles={{
           control: (provided) => ({
             ...provided,
