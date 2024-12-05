@@ -21,7 +21,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+    if (window.scrollY  > lastScrollY  && window.scrollY > 100) {
       setIsHidden(true);
     } else {
       setIsHidden(false);

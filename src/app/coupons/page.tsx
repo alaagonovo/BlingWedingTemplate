@@ -23,10 +23,16 @@ function Page() {
   }, []);
   return (
     <div className="main_Margin">
-      <HeroCoupons data={vendors?.slice(4, 8) || []} />
+      <HeroCoupons
+        data={(vendors || []).filter((_, index) =>
+          [4, 5, 7, 16].includes(index)
+        )}
+      />
       <HomeTitle />
       <OtherCoupons
-        data={vendors?.slice(0, 4).concat(vendors?.slice(8)) || []}
+        data={
+          vendors?.filter((_, index) => ![4, 5, 16, 7].includes(index)) || []
+        }
       />
     </div>
   );

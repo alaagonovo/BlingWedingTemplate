@@ -13,22 +13,22 @@ export default {
       img_src: "/3.webp",
     },
     {
-      img_src: "/4.webp",
+      img_src: "/55.webp",
     },
     // {
     //   vid_src: "/2.mp4",
     // },
     {
-      img_src: "/3.webp",
+      img_src: "/44.jpeg",
     },
     {
-      img_src: "/4.webp",
+      img_src: "/33.webp",
     },
     {
       vid_src: "/3.mp4",
     },
     {
-      img_src: "/3.webp",
+      img_src: "/66.webp",
     },
     {
       img_src: "/4.webp",
@@ -83,7 +83,7 @@ export default {
       img_src: "/16.webp",
     },
     {
-      img_src: "/7.jpg",
+      img_src: "/99.webp",
     },
     {
       vid_src: "/9.mp4",
@@ -98,7 +98,7 @@ export default {
       vid_src: "/10.mp4",
     },
     {
-      img_src: "/11.jpg",
+      img_src: "/77.webp",
     },
     // {
     //   vid_src: "/11.mp4",
@@ -107,10 +107,10 @@ export default {
       img_src: "/12.jpg",
     },
     {
-      img_src: "/pretty.webp",
+      img_src: "/111.webp",
     },
     {
-      img_src: "/15.webp",
+      img_src: "/88.webp",
     },
   ],
 };

@@ -15,7 +15,12 @@
   margin-inline-start: 1rem;
   text-decoration: underline;
 }
-@media (max-width: 768px) {
+.title_Container h1 a:hover {
+  transition: 1s;
+  color: var(--color-light-pink);
+  text-decoration: none;
+}
+@media (max-width: 868px) {
   .title_Container h1 {
     flex-direction: column;
     font-size: 8vw;

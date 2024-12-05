@@ -7,7 +7,7 @@ export default [
       // "During this consultation, we will chat about all of your dreamy wedding details. From vendor selection to styling aesthetics, we truly want to know it all.",
       // "Once we have gained an insight into the greater picture that is your dream wedding, we will then zoom into explaining our services and answering any questions you may have.",
     ],
-    img: "/6.webp",
+    img: "/steprep1.webp",
   },
   {
     title: "Step 2",
@@ -26,7 +26,7 @@ export default [
       "Stay up-to-date with the newest trends in weddings, from haute couture bridal gowns to innovative decor ideas.",
       // "This consultation will act as a designated time, to ensure that we are undeniably aligned when it comes to curating the perfect content that is uniquely yours. From your runsheet and key moment shot list right down to the music for each edit, we will work together to create your dream content plan.",
     ],
-    img: "/5.webp",
+    img: "/steprep3.webp",
   },
   {
     title: "Step 4",

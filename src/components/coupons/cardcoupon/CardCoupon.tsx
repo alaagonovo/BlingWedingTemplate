@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import styles from "./cardcoupone.module.css";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface CardCouponProps {
   images: string[];
@@ -65,18 +65,18 @@ const CardCoupon: React.FC<CardCouponProps> = ({
             {discount}% <span className="hidden sm:inline">OFF</span>
           </p>
 
-          <Link href="/payment">
-            <Image
-              src={images[index]}
-              width={100}
-              height={100}
-              alt={altText}
-              quality={80}
-              unoptimized={true} // Enable optimization
-              className={styles.coupon_image}
-              loading="lazy"
-            />
-          </Link>
+          {/* <Link href="/payment"> */}
+          <Image
+            src={images[index]}
+            width={100}
+            height={100}
+            alt={altText}
+            quality={80}
+            unoptimized={true} // Enable optimization
+            className={styles.coupon_image}
+            loading="lazy"
+          />
+          {/* </Link> */}
         </>
       )}
     </div>

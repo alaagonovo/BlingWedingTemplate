@@ -77,6 +77,9 @@
 .hidden {
   display: none;
 }
+.scroll_hidden {
+  transform: translateY(-100%); /* Moves header up by 100% */
+}
 @media (max-width: 1260px) {
   .header_Container nav .links_Container {
     transform: translate(-150px, -50%);
@@ -105,10 +108,11 @@
     position: absolute;
     left: 12px;
   }
+  .scroll_hidden {
+    transform: translateY(0);
+  }
 }
-.scroll_hidden {
-  transform: translateY(-100%); /* Moves header up by 100% */
-}
+
 @media (max-width: 440px) {
   .location p {
     font-size: 9px;
