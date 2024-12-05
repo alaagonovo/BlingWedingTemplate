@@ -46,6 +46,13 @@ function Contactus() {
           console.error("Failed to send email:", error.text);
         }
       );
+    setForm({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
   };
   return (
     <section className={styles.main_grid_contactus}>

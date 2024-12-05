@@ -53,6 +53,15 @@ function PaymentForm() {
           console.error("Failed to send email:", error.text);
         }
       );
+    setForm({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "01064182529",
+      country: "Egypt",
+      city: "",
+      street: "",
+    });
   };
   return (
     <div className={styles.payment__main__grid}>
