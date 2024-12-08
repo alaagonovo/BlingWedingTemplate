@@ -19,6 +19,7 @@
   justify-content: center;
   gap: 12px;
   align-items: center;
+  z-index: 2;
 }
 .speker_ele {
   width: 35px;
