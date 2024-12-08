@@ -168,7 +168,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
                 src={fallback}
                 alt="Loading Video"
                 fill
-                style={{ ...commonStyle, position: "absolute", zIndex: 1 }}
+                style={{ ...commonStyle, position: "absolute" }}
                 loading="lazy"
                 placeholder="blur"
                 blurDataURL={fallback}
