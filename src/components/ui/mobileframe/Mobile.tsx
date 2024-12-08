@@ -1,42 +1,41 @@
 "use client";
-// import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./mobile.css";
 import Image from "next/image";
 
 interface IMobileframe {
   video?: string;
   image?: string;
-  fallback?: string;
 }
 
 function MobileFrame({ video, image }: IMobileframe) {
-  // const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the component is in the viewport
+  const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the component is in the viewport
   // const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
-  // const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer to check if the component is in the viewport
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       setIsVisible(entry.isIntersecting);
-  //     },
-  //     {
-  //       root: null,
-  //       rootMargin: "600px 0px",
-  //       threshold: 0, // Load when 10% of the component is visible
-  //     }
-  //   );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "700px 0px",
+        threshold: 0, // Load when 10% of the component is visible
+      }
+    );
 
-  //   if (containerRef.current) {
-  //     observer.observe(containerRef.current);
-  //   }
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
-  //   return () => {
-  //     if (containerRef.current) {
-  //       observer.unobserve(containerRef.current);
-  //     }
-  //   };
-  // }, []);
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
 
   const commonStyle: React.CSSProperties = {
     objectFit: "cover",
@@ -47,7 +46,7 @@ function MobileFrame({ video, image }: IMobileframe) {
   };
 
   return (
-    <div className="mobile_container" /*ref={containerRef}*/>
+    <div className="mobile_container" ref={containerRef}>
       <div className="specker_notch">
         <p className="speker_ele"></p>
         <p className="camera_ele"></p>
@@ -58,12 +57,12 @@ function MobileFrame({ video, image }: IMobileframe) {
       <p className="button right_btn"></p>
       <div className="mobile_content">
         {/* Lazy-load the image */}
-        {image /*&& isVisible */ && (
+        {image && isVisible && (
           <Image style={commonStyle} src={image} alt="product" loading="lazy" />
         )}
 
         {/* Lazy-load the video */}
-        {video /*&& isVisible*/ && (
+        {video && isVisible && (
           <>
             <video
               src={video}
@@ -71,7 +70,6 @@ function MobileFrame({ video, image }: IMobileframe) {
               autoPlay
               muted
               playsInline
-              // poster={fallback}
               style={{
                 ...commonStyle,
                 // display: isVideoLoaded ? "block" : "none",
