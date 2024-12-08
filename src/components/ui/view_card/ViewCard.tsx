@@ -40,6 +40,7 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewcard) {
               width={345}
               height={195}
               loading="eager"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 345px"
               priority
             />
           )}
@@ -54,6 +55,7 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewcard) {
           height={195}
           loading="eager"
           blurDataURL="/img-vid4.webp"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 345px"
         />
       )}
     </div>
