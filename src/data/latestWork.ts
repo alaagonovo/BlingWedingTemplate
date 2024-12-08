@@ -1,4 +1,4 @@
-export default [
+const latestWorks = [
   {
     // title: "ANNU & MARY WEDDING",
     // year: "2024",
@@ -18,3 +18,4 @@ export default [
     hoverImage: "/6.webp",
   },
 ];
+export default latestWorks;

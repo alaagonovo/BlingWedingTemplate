@@ -101,7 +101,7 @@ function Contactus() {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
+              <Label htmlFor="email1" value="Your email" className="dark:text-gray-900" />
             </div>
             <TextInput
               id="email1"

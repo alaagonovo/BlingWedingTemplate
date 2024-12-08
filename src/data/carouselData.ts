@@ -1,4 +1,4 @@
-export default {
+const carouselData = {
   line1: [
     {
       img_src: "/1.webp",
@@ -8,6 +8,7 @@ export default {
     },
     {
       vid_src: "/1.mp4",
+      img_fallback: "/img-vid2.webp",
     },
     {
       img_src: "/3.webp",
@@ -15,9 +16,7 @@ export default {
     {
       img_src: "/55.webp",
     },
-    // {
-    //   vid_src: "/2.mp4",
-    // },
+
     {
       img_src: "/44.jpeg",
     },
@@ -26,6 +25,7 @@ export default {
     },
     {
       vid_src: "/3.mp4",
+      img_fallback: "/img-vid3.webp",
     },
     {
       img_src: "/66.webp",
@@ -35,6 +35,7 @@ export default {
     },
     {
       vid_src: "/2.mp4",
+      img_fallback: "/im_vide3.png",
     },
   ],
   line2: [
@@ -46,6 +47,7 @@ export default {
     },
     {
       vid_src: "/4.mp4",
+      img_fallback: "/gimage.png",
     },
     {
       img_src: "/9.webp",
@@ -55,6 +57,7 @@ export default {
     },
     {
       vid_src: "/5.mp4",
+      img_fallback: "/coupleimg.png",
     },
     {
       img_src: "/11.jpg",
@@ -62,9 +65,7 @@ export default {
     {
       img_src: "/12.jpg",
     },
-    // {
-    //   vid_src: "/6.mp4",
-    // },
+
     {
       img_src: "/14.webp",
     },
@@ -73,11 +74,13 @@ export default {
     },
     {
       vid_src: "/7.mp4",
+      img_fallback: "/greenimg.png",
     },
   ],
   line3: [
     {
       vid_src: "/8.mp4",
+      img_fallback: "/zaina.png",
     },
     {
       img_src: "/16.webp",
@@ -87,6 +90,7 @@ export default {
     },
     {
       vid_src: "/9.mp4",
+      img_fallback: "/stepimg.png",
     },
     {
       img_src: "/gallery3.webp",
@@ -94,15 +98,14 @@ export default {
     {
       img_src: "/gallery5.webp",
     },
-    {
-      vid_src: "/10.mp4",
-    },
+
     {
       img_src: "/77.webp",
     },
-    // {
-    //   vid_src: "/11.mp4",
-    // },
+    {
+      vid_src: "/10.mp4",
+      img_fallback: "/lastimg.png",
+    },
     {
       img_src: "/12.jpg",
     },
@@ -110,7 +113,8 @@ export default {
       img_src: "/111.webp",
     },
     {
-      img_src: "/88.webp",
+      img_src: "/steprep1.webp",
     },
   ],
 };
+export default carouselData;

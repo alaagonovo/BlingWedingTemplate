@@ -10,7 +10,7 @@ interface IMobileframe {
 
 function MobileFrame({ video, image }: IMobileframe) {
   const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the component is in the viewport
-  const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
+  // const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer to check if the component is in the viewport
@@ -21,7 +21,7 @@ function MobileFrame({ video, image }: IMobileframe) {
       },
       {
         root: null,
-        rootMargin: "500px 0px",
+        rootMargin: "100px 0px",
         threshold: 0, // Load when 10% of the component is visible
       }
     );
@@ -42,6 +42,7 @@ function MobileFrame({ video, image }: IMobileframe) {
     width: "100%",
     height: "100%",
     borderRadius: "28px",
+    display: "block",
   };
 
   return (
@@ -71,9 +72,9 @@ function MobileFrame({ video, image }: IMobileframe) {
               playsInline
               style={{
                 ...commonStyle,
-                display: isVideoLoaded ? "block" : "none",
+                // display: isVideoLoaded ? "block" : "none",
               }}
-              onLoadedData={() => setIsVideoLoaded(true)}
+              // onLoadedData={() => setIsVideoLoaded(true)}
             />
           </>
         )}

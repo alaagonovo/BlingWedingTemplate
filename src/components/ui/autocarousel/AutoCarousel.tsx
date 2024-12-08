@@ -7,6 +7,7 @@ import "./autoCarousel.css";
 interface IAutoCarousel {
   img_src?: string;
   vid_src?: string;
+  img_fallback?: string;
 }
 
 function AutoCarousel({
@@ -119,6 +120,7 @@ function AutoCarousel({
             <ViewCard
               img_src={item.img_src} // Fallback image
               vid_src={item.vid_src}
+              img_fallback={item.img_fallback}
               key={index}
             />
           ))}

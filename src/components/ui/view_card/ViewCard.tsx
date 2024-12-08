@@ -7,9 +7,10 @@ import Image from "next/image";
 interface IViewcard {
   img_src?: string;
   vid_src?: string;
+  img_fallback?: string;
 }
 
-function ViewCard({ img_src, vid_src }: IViewcard) {
+function ViewCard({ img_src, vid_src, img_fallback }: IViewcard) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleLoaded = () => {
@@ -34,12 +35,13 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           {!isLoaded && (
             <Image
               className={styles.img_Cover}
-              src={img_src || "/img-vid4.webp"}
+              src={img_fallback!}
               alt="viewImage"
               width={345}
               height={195}
               loading="eager"
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 345px"
             />
           )}
         </>
@@ -53,6 +55,7 @@ function ViewCard({ img_src, vid_src }: IViewcard) {
           height={195}
           loading="eager"
           blurDataURL="/img-vid4.webp"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 345px"
         />
       )}
     </div>
