@@ -2,19 +2,18 @@ import React from "react";
 import { blogData } from "./data";
 import Button from "../Button/Button";
 import Slider from "react-slick";
-const MobileFrame = React.lazy(() => import("../mobileframe/Mobile"));
+// const MobileFrame = React.lazy(() => import("../mobileframe/Mobile"));
+import MobileFrame from "../mobileframe/Mobile";
 import styles from "./blog.module.css";
 
 function Blog() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
 
     responsive: [
       {
@@ -49,7 +48,7 @@ function Blog() {
               data-aos="fade-zoom-in"
               data-aos-delay={index * 200}
             >
-              <MobileFrame video={item.vid_src}  />
+              <MobileFrame video={item.vid_src} fallback={item.fallback} />
             </div>
           ))}
         </Slider>
