@@ -49,7 +49,7 @@ function Blog() {
               data-aos="fade-zoom-in"
               data-aos-delay={index * 200}
             >
-              <MobileFrame video={item} />
+              <MobileFrame video={item.vid_src} fallback={item.fallback_img} />
             </div>
           ))}
         </Slider>
