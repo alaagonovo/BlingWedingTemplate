@@ -21,7 +21,7 @@ function MobileFrame({ video, image }: IMobileframe) {
       },
       {
         root: null,
-        rootMargin: "100px 0px",
+        rootMargin: "600px 0px",
         threshold: 0, // Load when 10% of the component is visible
       }
     );
