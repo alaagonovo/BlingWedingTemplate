@@ -112,7 +112,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
       },
       {
         root: null,
-        rootMargin: "300px 0px", // Preload the content slightly before it enters the viewport
+        rootMargin: "900px 0px", // Preload the content slightly before it enters the viewport
         threshold: 0.0, // Load when 10% of the component is visible
       }
     );
