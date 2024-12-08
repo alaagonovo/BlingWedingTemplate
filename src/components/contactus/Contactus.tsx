@@ -169,9 +169,15 @@ function Contactus() {
       <div className={styles.sec_main_container}>
         <div className={styles.mobiles_container} data-aos="fade-left">
           <div className={styles.first_mob}>
-            <MobileFrame video="/contactusmob1.mp4" />
+            <MobileFrame
+              video="/contactusmob1.mp4"
+              fallback="/contactusfall1.webp"
+            />
           </div>
-          <MobileFrame video="/contactusmob2.mp4" />
+          <MobileFrame
+            video="/contactusmob2.mp4"
+            fallback="/contactusfall2.webp"
+          />
         </div>
       </div>
     </section>
