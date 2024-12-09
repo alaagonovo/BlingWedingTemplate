@@ -1,92 +1,15 @@
-// "use client";
-// import React, { useEffect, useRef, useState } from "react";
-// import styles from "./LastWorks.module.css";
-// import LastWorkCard from "../ui/lastWorkCard/LastWorkCard";
-// import latestWork from "@/data/latestWork";
-// function CheckOurLastWorks() {
-//   const scrollRef = useRef<HTMLDivElement | null>(null);
-//   const [windowWidth, setWindowWidth] = useState(0);
-//   const [scrollvalue, setScrollVale] = useState(0);
-//   const [start, setStart] = useState(0);
-//   const [end, setEnd] = useState(0);
-//   const updateWindowWidth = () => {
-//     setWindowWidth(window.innerWidth);
-//   };
-//   useEffect(() => {
-//     if (typeof window !== "undefined") {
-//       setWindowWidth(window.innerWidth);
-//     }
-//     window.addEventListener("resize", updateWindowWidth);
-//     setScrollVale(1110 - (windowWidth - 580));
-//     return () => {
-//       window.removeEventListener("resize", updateWindowWidth);
-//       setScrollVale(1110 - (windowWidth - 580));
-//     };
-//   }, [windowWidth]);
-//   const handleScroll = (/*e: React.WheelEvent*/) => {
-//     console.log("gg");
-//     if (scrollRef.current) {
-//       // if (e.deltaY > 0) {
-//       // Scrolling down (wheel down)
-
-//       if (start > end) {
-//         scrollRef.current.style.transform = `translateX(-${scrollvalue}px)`;
-//       } else {
-//         // Scrolling up (wheel up)
-//         scrollRef.current.style.transform = "translateX(0px)";
-//       }
-//     }
-//   };
-//   return (
-//     <section className={styles.main_latest_works} /*onWheel={handleScroll}*/>
-//       <div className={styles.top_Part}>
-//         <div className={styles.content}>
-//           <div className={styles.title_Container}>
-//             <h1 data-aos="fade-right">CHECK OUT OUR LATEST WORK!</h1>
-//           </div>
-//           <div className={styles.main_Scroll}>
-//             <div
-//               className={styles.trace_container}
-//               ref={scrollRef}
-//               onWheel={handleScroll}
-//             >
-//               {latestWork.map((item, index) => (
-//                 <div
-//                   key={index}
-//                   onMouseDownCapture={(e) => setStart(e.clientX)}
-//                   onMouseOverCapture={(e) => {
-//                     setEnd(e.clientX);
-//                     handleScroll();
-//                   }}
-
-//                   // onMouseUpCapture={(e) => end(e)}
-//                 >
-//                   <LastWorkCard
-//                     defaultImage={item.defaultImage}
-//                     hoverImage={item.hoverImage}
-//                     key={index}
-//                     index={index}
-//                   />
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className={styles.bottom_Part}>
-//         <p>Events / Portrait photographer / Weddings & film maker</p>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default CheckOurLastWorks;
-
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LastWorks.module.css";
-import LastWorkCard from "../ui/lastWorkCard/LastWorkCard";
+// import LastWorkCard from "../ui/lastWorkCard/LastWorkCard";
+const LastWorkCard = React.lazy(
+  () => import("../ui/lastWorkCard/LastWorkCard")
+);
+// const LastWorkCard = dynamic(() => import("../ui/lastWorkCard/LastWorkCard"), {
+//   ssr: false,
+// });
 import latestWork from "@/data/latestWork";
+// import dynamic from "next/dynamic";
 
 function CheckOurLastWorks() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -112,7 +35,7 @@ function CheckOurLastWorks() {
 
   // When mouse button is pressed down
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current ) return;
+    if (!scrollRef.current) return;
     setIsDragging(true); // Start dragging
     setStartX(e.clientX); // Capture the initial X position
   };

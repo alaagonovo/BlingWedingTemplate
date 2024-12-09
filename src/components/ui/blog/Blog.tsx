@@ -1,20 +1,28 @@
+"use client";
 import React from "react";
-import { blogData } from "./data";
-import Button from "../Button/Button";
-import Slider from "react-slick";
-// const MobileFrame = React.lazy(() => import("../mobileframe/Mobile"));
-import MobileFrame from "../mobileframe/Mobile";
 import styles from "./blog.module.css";
-
+import { blogData } from "./data";
+// import Button from "../Button/Button";
+import Slider from "react-slick";
+// import dynamic from "next/dynamic";
+// import MobileFrame from "../mobileframe/Mobile";
+const MobileFrame = React.lazy(
+  () => import("@/components/ui/mobileframe/Mobile")
+);
+const Button = React.lazy(() => import("@/components/ui/Button/Button"));
+// const MobileFrame = dynamic(() => import("../mobileframe/Mobile"), {
+//   ssr: false,
+// });
+// const Button = dynamic(() => import("@/components/ui/Button/Button"), {
+//   ssr: false,
+// });
 function Blog() {
   const settings = {
     dots: false,
     infinite: true,
-
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
-
     responsive: [
       {
         breakpoint: 690,
@@ -27,6 +35,7 @@ function Blog() {
       },
     ],
   };
+
   return (
     <section className={styles.blog_section}>
       <h1
@@ -46,7 +55,7 @@ function Blog() {
               key={index}
               className={styles.mobile_Container}
               data-aos="fade-zoom-in"
-              data-aos-delay={index * 200}
+              data-aos-delay={index * 100}
             >
               <MobileFrame video={item.vid_src} fallback={item.fallback} />
             </div>

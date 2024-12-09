@@ -31,7 +31,7 @@
 }
 .mobiles_container {
   position: absolute;
-  top: 110px;
+  top: 190px;
   display: flex;
 }
 .first_mob {
@@ -51,6 +51,9 @@
   .sec_main_container {
     height: 530px;
     order: -1;
+  }
+  .mobiles_container {
+    top: 110px;
   }
 }
 @media (max-width: 530px) {

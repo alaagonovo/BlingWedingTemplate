@@ -9,17 +9,18 @@ import OtherCoupons from "@/components/coupons/couponssection/OtherCoupons";
 function Page() {
   const supabase = createClient();
   const [vendors, setVendors] = useState<Tables<"vendors">[] | null>();
-  const fetchCoupons = async () => {
-    const { data, error } = await supabase.from("vendors").select();
-    if (error) {
-      console.error("Error fetching price lists:", error);
-    } else {
-      setVendors(data);
-    }
-  };
+  
   useEffect(() => {
+    const fetchCoupons = async () => {
+      const { data, error } = await supabase.from("vendors").select();
+      if (error) {
+        console.error("Error fetching price lists:", error);
+      } else {
+        setVendors(data);
+      }
+    };
     fetchCoupons();
-  }, []);
+  }, [supabase]);
   return (
     <div className="main_Margin">
       <HeroCoupons

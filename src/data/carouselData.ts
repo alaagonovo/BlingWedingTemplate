@@ -18,7 +18,7 @@ const carouselData = {
     },
 
     {
-      img_src: "/44.jpeg",
+      img_src: "/444.webp",
     },
     {
       img_src: "/33.webp",
@@ -35,35 +35,35 @@ const carouselData = {
     },
     {
       vid_src: "/2.mp4",
-      img_fallback: "/im_vide3.png",
+      img_fallback: "/im_vide3.webp",
     },
   ],
   line2: [
     {
-      img_src: "/8.jpg",
+      img_src: "/18.webp",
     },
     {
-      img_src: "/7.jpg",
+      img_src: "/177.webp",
     },
     {
       vid_src: "/4.mp4",
-      img_fallback: "/gimage.png",
+      img_fallback: "/gimage.webp",
     },
     {
       img_src: "/9.webp",
     },
     {
-      img_src: "/10.jpg",
+      img_src: "/110.webp",
     },
     {
       vid_src: "/5.mp4",
-      img_fallback: "/coupleimg.png",
+      img_fallback: "/coupleimg.webp",
     },
     {
-      img_src: "/11.jpg",
+      img_src: "/101.webp",
     },
     {
-      img_src: "/12.jpg",
+      img_src: "/122.webp",
     },
 
     {
@@ -74,13 +74,13 @@ const carouselData = {
     },
     {
       vid_src: "/7.mp4",
-      img_fallback: "/greenimg.png",
+      img_fallback: "/greenimg.webp",
     },
   ],
   line3: [
     {
       vid_src: "/8.mp4",
-      img_fallback: "/zaina.png",
+      img_fallback: "/zaina.webp",
     },
     {
       img_src: "/16.webp",
@@ -90,7 +90,7 @@ const carouselData = {
     },
     {
       vid_src: "/9.mp4",
-      img_fallback: "/stepimg.png",
+      img_fallback: "/stepimg.webp",
     },
     {
       img_src: "/gallery3.webp",
@@ -104,10 +104,10 @@ const carouselData = {
     },
     {
       vid_src: "/10.mp4",
-      img_fallback: "/lastimg.png",
+      img_fallback: "/lastimg.webp",
     },
     {
-      img_src: "/12.jpg",
+      img_src: "/122.webp",
     },
     {
       img_src: "/111.webp",

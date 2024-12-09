@@ -1,21 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./steps.module.css";
+import steps from "@/data/steps";
 
-interface Step {
-  title: string;
-  subTitle: string;
-  paragraphs: string[];
-  img?: string; // Optional, as video might be used instead
-  vid?: string; // Optional, as image might be used instead
-  marginTop?: boolean;
-}
-
-interface StepsProps {
-  steps: Step[];
-}
-
-const Steps: React.FC<StepsProps> = ({ steps }) => {
+const Steps: React.FC = () => {
   const [visibleIndexes, setVisibleIndexes] = useState<Set<number>>(new Set());
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -36,12 +24,17 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
       }
     );
 
-    stepRefs.current.forEach((ref) => {
+    // Create a copy of stepRefs.current to use inside the effect
+    const refsCopy = stepRefs.current;
+
+    // Observe the elements
+    refsCopy.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
+    // Cleanup function: unobserve the elements
     return () => {
-      stepRefs.current.forEach((ref) => {
+      refsCopy.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -49,7 +42,7 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
 
   return (
     <section className={styles.main_Steps}>
-      {steps.map((item, index) => (
+      {steps?.map((item, index) => (
         <React.Fragment key={index}>
           {index % 2 === 0 ? (
             <div
@@ -58,7 +51,6 @@ const Steps: React.FC<StepsProps> = ({ steps }) => {
               }}
               data-index={index}
               className={styles.steps_grid}
-              style={item.marginTop ? { marginTop: "4rem" } : undefined}
             >
               {item.vid ? (
                 <video

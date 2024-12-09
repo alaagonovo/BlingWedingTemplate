@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./Aside.module.css";
 import links from "@/data/links";
-import PropTypes from "prop-types";
+
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 interface LinkType {
@@ -77,10 +77,5 @@ function Aside({ isOpen, setOpen }: AsideProps) {
     </aside>
   );
 }
-
-Aside.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  setOpen: PropTypes.func.isRequired,
-};
 
 export default Aside;

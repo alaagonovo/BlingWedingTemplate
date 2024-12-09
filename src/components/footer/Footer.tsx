@@ -15,7 +15,7 @@ function Footer() {
           <div className={styles.gallery}>
             <Image
               className={styles.mobile_Logo}
-              src="/logo.png"
+              src="/logo.webp"
               alt="logo"
               loading="lazy"
               width={125}
@@ -32,9 +32,8 @@ function Footer() {
                     // width={80}
                     // height={100}
                     alt="insta Image"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
+                    fill
+                    quality={80}
                     loading="lazy"
                   />
                 </Link>
@@ -44,7 +43,7 @@ function Footer() {
         </div>
         <div className={styles.middle}>
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="logo"
             width={166}
             height={72}
@@ -82,13 +81,15 @@ function Footer() {
               <Link href="/aboutus">About</Link>
             </li>
             <li>
-              <Link href="/">How to Work</Link>
+              <Link href="/#latestworks">Latest works</Link>
             </li>
             <li>
-              <Link href="/">Copouns</Link>
+              <Link href="/coupons">Copouns</Link>
             </li>
             <li>
-              <Link href="/">Our Work</Link>
+              <Link href="https://www.instagram.com/bling.weddings/">
+                Our Work
+              </Link>
             </li>
           </ul>
         </div>

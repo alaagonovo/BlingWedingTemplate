@@ -1,16 +1,13 @@
-"use client";
-import styles from "./page.module.css";
 import React from "react";
+import styles from "./page.module.css";
 import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
-// const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
-import Blog from "@/components/ui/blog/Blog";
+const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
 const CheckOurLastWorks = React.lazy(
   () => import("@/components/checkourlastworks/CheckOurLastWorks")
 );
 const Behindtheagency = React.lazy(
   () => import("@/components/behindtheagency/Behindtheagency")
 );
-import steps from "@/data/steps";
 const Steps = React.lazy(() => import("@/components/steps/Steps"));
 const Contactus = React.lazy(() => import("@/components/contactus/Contactus"));
 
@@ -23,7 +20,7 @@ export default function Home() {
         <CheckOurLastWorks />
       </div>
       <Behindtheagency />
-      <Steps steps={steps} />
+      <Steps />
       <div id="contactus">
         <Contactus />
       </div>

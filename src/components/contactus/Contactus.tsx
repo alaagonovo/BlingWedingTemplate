@@ -1,12 +1,17 @@
+"use client";
 import React, { useRef, useState } from "react";
-
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 // import "./contactus.css";
 import styles from "./contactus.module.css";
-import MobileFrame from "../ui/mobileframe/Mobile";
+// import MobileFrame from "../ui/mobileframe/Mobile";
+const MobileFrame = React.lazy(() => import("../ui/mobileframe/Mobile"));
+// const MobileFrame = dynamic(() => import("../ui/mobileframe/Mobile"), {
+//   ssr: false,
+// });
 import emailjs from "@emailjs/browser";
 import { Label, TextInput } from "flowbite-react";
+// import dynamic from "next/dynamic";
 function Contactus() {
   const formDataRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({
