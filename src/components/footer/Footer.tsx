@@ -19,6 +19,7 @@ function Footer() {
               alt="logo"
               loading="lazy"
               width={125}
+              sizes="125px"
               height={50}
             />
             <div className={styles.images_container}>
@@ -47,6 +48,7 @@ function Footer() {
             alt="logo"
             width={166}
             height={72}
+            sizes="166px"
             loading="lazy"
           />
           <div style={{ marginTop: "2rem", textAlign: "center" }}>

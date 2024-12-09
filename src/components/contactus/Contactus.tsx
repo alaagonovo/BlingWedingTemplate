@@ -1,13 +1,14 @@
+"use client";
 import React, { useRef, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-// import "./contactus.css";
+
 import styles from "./contactus.module.css";
-// import MobileFrame from "../ui/mobileframe/Mobile";
-const MobileFrame = React.lazy(() => import("../ui/mobileframe/Mobile"));
-// const MobileFrame = dynamic(() => import("../ui/mobileframe/Mobile"), {
-//   ssr: false,
-// });
+
+const MobileFrame = React.lazy(
+  () => import("@/components/ui/mobileframe/Mobile")
+);
+
 import emailjs from "@emailjs/browser";
 import { Label, TextInput } from "flowbite-react";
 // import dynamic from "next/dynamic";
@@ -163,7 +164,7 @@ function Contactus() {
 
           <button
             type="submit"
-            className="text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center "
           >
             Send Your Message
           </button>

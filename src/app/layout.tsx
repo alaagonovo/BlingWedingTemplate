@@ -36,25 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunito.className} ${kristi.className}`}>
       <head>
-        {/* <link
-          rel="preload"
-          as="image"
-          href="/_next/image?url=%2F14.webp&w=345&q=75"
-        /> */}
-        {/* Preload critical JS chunks */}
-        <link
-          rel="preload"
-          href="/_next/static/chunks/1517-111b6675d80f7ce9.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="/_next/static/chunks/4bd1b696-84a26fccac2fd0d4.js"
-          as="script"
-        />
-        <link rel="preload" href="/1.mp4" as="video" />
-        <link rel="preload" href="/4.mp4" as="video" />
-        <link rel="preload" href="/8.mp4" as="video" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

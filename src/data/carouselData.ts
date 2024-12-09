@@ -21,18 +21,16 @@ const carouselData = {
       img_src: "/444.webp",
     },
     {
-      img_src: "/33.webp",
-    },
-    {
       vid_src: "/3.mp4",
       img_fallback: "/img-vid3.webp",
     },
     {
-      img_src: "/66.webp",
+      img_src: "/33.webp",
     },
-    {
-      img_src: "/4.webp",
-    },
+    // {
+    //   img_src: "/66.webp",
+    // },
+
     {
       vid_src: "/2.mp4",
       img_fallback: "/im_vide3.webp",
@@ -67,15 +65,12 @@ const carouselData = {
     },
 
     {
-      img_src: "/14.webp",
-    },
-    {
-      img_src: "/15.webp",
-    },
-    {
       vid_src: "/7.mp4",
       img_fallback: "/greenimg.webp",
     },
+    // {
+    //   img_src: "/14.webp",
+    // },
   ],
   line3: [
     {
@@ -107,14 +102,11 @@ const carouselData = {
       img_fallback: "/lastimg.webp",
     },
     {
-      img_src: "/122.webp",
-    },
-    {
       img_src: "/111.webp",
     },
-    {
-      img_src: "/steprep1.webp",
-    },
+    // {
+    //   img_src: "/steprep1.webp",
+    // },
   ],
 };
 export default carouselData;

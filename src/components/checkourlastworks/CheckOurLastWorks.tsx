@@ -1,21 +1,16 @@
-// "use client";
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LastWorks.module.css";
-// import LastWorkCard from "../ui/lastWorkCard/LastWorkCard";
 const LastWorkCard = React.lazy(
   () => import("../ui/lastWorkCard/LastWorkCard")
 );
-// const LastWorkCard = dynamic(() => import("../ui/lastWorkCard/LastWorkCard"), {
-//   ssr: false,
-// });
 import latestWork from "@/data/latestWork";
-// import dynamic from "next/dynamic";
 
 function CheckOurLastWorks() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  // const [currentX, setCurrentX] = useState(0); // To track the current position of the cursor
+
   const [maxScrollValue, setMaxScrollValue] = useState(0);
   const [translateX, setTranslateX] = useState(0); // Track the translateX value
 
