@@ -42,6 +42,27 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+         <link
+          rel="preload"
+          as="image"
+          href="/greenimg.webp"
+          imageSrcSet="/_next/image?url=%2Fgreenimg.webp&amp;w=640&amp;q=75"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/greenimg.webp"
+          imageSrcSet="/_next/image?url=%2F18.webp&amp;w=640&amp;q=75"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/greenimg.webp"
+          imageSrcSet="/_next/image?url=%2F16.webp&amp;w=640&amp;q=75"
+          type="image/webp"
+        />
       </head>
       <body>
         <WithAOS>

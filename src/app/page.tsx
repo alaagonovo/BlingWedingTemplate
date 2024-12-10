@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import AutoSlider from "@/components/about/autoSlideHero/AutoSlider";
-const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
+import Blog from "@/components/ui/blog/Blog";
+// const Blog = React.lazy(() => import("@/components/ui/blog/Blog"));
 const CheckOurLastWorks = React.lazy(
   () => import("@/components/checkourlastworks/CheckOurLastWorks")
 );
