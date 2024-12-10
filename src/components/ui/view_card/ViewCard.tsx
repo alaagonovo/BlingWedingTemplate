@@ -112,9 +112,10 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
       alt={alt}
       width={345}
       height={195}
-      loading="eager"
+      // loading="eager"
+      loading="lazy"
       sizes="345px"
-      priority
+      // priority
     />
   );
 
@@ -123,7 +124,9 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
       {vid_src && isVisible ? (
         <>
           {renderVideo()}
-          {!isVideoLoaded && img_fallback && renderImage(img_fallback, "Fallback Image")}
+          {!isVideoLoaded &&
+            img_fallback &&
+            renderImage(img_fallback, "Fallback Image")}
         </>
       ) : null}
 
