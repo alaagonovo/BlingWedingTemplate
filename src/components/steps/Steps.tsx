@@ -20,7 +20,7 @@ const Steps: React.FC = () => {
         setVisibleIndexes(updatedIndexes);
       },
       {
-        threshold: 0, 
+        threshold: 0,
         root: null,
         rootMargin: "100px",
       }

@@ -20,30 +20,7 @@ function About() {
         authenticity to preserve every heartfelt detail of your wedding day. We
         believe each couple’s love is unique, and our goal is to create moments
         that reflect your personalities and connection.
-        {/*With a keen eye for
-        emotion and a dedication to making you feel at ease, we’re here to
-        document your once-in-a-lifetime moments, so you can relive them
-        forever.*/}
       </p>
-      {/* <Button text="Book Your Session" link="/" /> */}
-      {/* <div className={styles.image_left} data-aos="fade-right">
-        <Image
-          src="/14.webp"
-          alt="view image"
-          width={330}
-          height={160}
-          loading="lazy"
-        />
-      </div>
-      <div className={styles.image_right} data-aos="fade-left">
-        <Image
-          src="/4.webp"
-          alt="view image"
-          width={250}
-          height={280}
-          loading="lazy"
-        />
-      </div> */}
     </div>
   );
 }

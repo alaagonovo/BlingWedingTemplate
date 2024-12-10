@@ -11,7 +11,7 @@ const carouselData = {
       img_fallback: "/img-vid2.webp",
     },
     {
-      img_src: "/3.webp",
+      img_src: "/comp2.webp",
     },
     {
       img_src: "/55.webp",
@@ -68,9 +68,7 @@ const carouselData = {
       vid_src: "/7.mp4",
       img_fallback: "/greenimg.webp",
     },
-    // {
-    //   img_src: "/14.webp",
-    // },
+    
   ],
   line3: [
     {
@@ -78,7 +76,7 @@ const carouselData = {
       img_fallback: "/zaina.webp",
     },
     {
-      img_src: "/16.webp",
+      img_src: "/comp1.webp",
     },
     {
       img_src: "/99.webp",
