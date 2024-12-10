@@ -163,6 +163,7 @@ function AutoCarousel({
               img_src={item.img_src}
               vid_src={item.vid_src}
               img_fallback={item.img_fallback}
+              index={index}
               key={index}
             />
           ))}

@@ -73,17 +73,18 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./viewcard.module.css";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+// import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 interface IViewCard {
   img_src?: string;
   vid_src?: string;
   img_fallback?: string;
+  index?: number;
 }
 
-function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
+function ViewCard({ img_src, vid_src, img_fallback, index }: IViewCard) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false); // Track video load status
-  const { isVisible, elementRef } = useIntersectionObserver();
+  // const { isVisible, elementRef } = useIntersectionObserver();
 
   // Reset video loading status when `vid_src` changes
   useEffect(() => {
@@ -115,13 +116,13 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
       // loading="eager"
       // loading="lazy"
       sizes="345px"
-      priority={true}
+      priority={index! < 6 ? true : false}
     />
   );
 
   return (
-    <div className={styles.main_cover} ref={elementRef}>
-      {vid_src && isVisible ? (
+    <div className={styles.main_cover} /*ref={elementRef}*/>
+      {vid_src /*&& isVisible*/ ? (
         <>
           {renderVideo()}
           {!isVideoLoaded &&
@@ -130,7 +131,7 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
         </>
       ) : null}
 
-      {img_src && isVisible && renderImage(img_src, "View Image")}
+      {img_src /*&& isVisible*/ && renderImage(img_src, "View Image")}
     </div>
   );
 }
