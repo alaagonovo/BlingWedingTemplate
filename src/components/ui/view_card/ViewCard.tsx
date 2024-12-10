@@ -113,9 +113,9 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
       width={345}
       height={195}
       // loading="eager"
-      loading="lazy"
+      // loading="lazy"
       sizes="345px"
-      // priority
+      priority={true}
     />
   );
 
