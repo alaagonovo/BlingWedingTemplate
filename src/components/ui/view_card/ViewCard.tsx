@@ -42,9 +42,9 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
               alt="view Image"
               width={345}
               height={195}
-              loading="eager"
+              // loading="eager"
               sizes="345px"
-              priority
+              // priority={true}
             />
           )}
         </>
@@ -58,9 +58,9 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
           alt="viewImage"
           width={345}
           height={195}
-          loading="eager"
+          // loading="eager"
           sizes="345px"
-          priority={true}
+          // priority={true}
         />
       )}
     </div>
