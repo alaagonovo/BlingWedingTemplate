@@ -42,7 +42,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-         <link
+        <link
           rel="preload"
           as="image"
           href="/greenimg.webp"
