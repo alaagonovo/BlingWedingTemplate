@@ -25,7 +25,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
       {
         root: null,
         rootMargin: "900px 100px", // Preload the content slightly before it enters the viewport
-        threshold: 0, // Load when 10% of the component is visible
+        threshold: 0.01, // Load when 10% of the component is visible
       }
     );
 
