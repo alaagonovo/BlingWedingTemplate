@@ -20,7 +20,9 @@ const Steps: React.FC = () => {
         setVisibleIndexes(updatedIndexes);
       },
       {
-        threshold: 0, // Trigger when 10% of the element is visible
+        threshold: 0, 
+        root: null,
+        rootMargin: "100px",
       }
     );
 
