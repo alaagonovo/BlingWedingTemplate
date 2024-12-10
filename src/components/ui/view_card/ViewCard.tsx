@@ -20,7 +20,19 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
 
   return (
     <div className={styles.main_cover} ref={elementRef}>
-      {vid_src && isVisible && (
+      {!isVideoLoaded && isVisible && vid_src && img_fallback && (
+        <Image
+          className={styles.img_Cover}
+          src={img_fallback}
+          alt="view Image"
+          width={345}
+          height={195}
+          loading="eager"
+          sizes="345px"
+          priority={true}
+        />
+      )}
+      {vid_src && isVisible && isVideoLoaded && (
         <>
           <video
             className={`${styles.video} ${!isVideoLoaded ? styles.hidden : ""}`}
@@ -36,18 +48,6 @@ function ViewCard({ img_src, vid_src, img_fallback }: IViewCard) {
             <source src={vid_src} type="video/mp4" />
           </video>
           {/* Fallback image */}
-          {!isVideoLoaded && isVisible && img_fallback && (
-            <Image
-              className={styles.img_Cover}
-              src={img_fallback}
-              alt="view Image"
-              width={345}
-              height={195}
-              loading="eager"
-              sizes="345px"
-              priority={true}
-            />
-          )}
         </>
       )}
 

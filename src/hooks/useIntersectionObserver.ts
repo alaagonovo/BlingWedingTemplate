@@ -15,7 +15,7 @@ export const useIntersectionObserver = () => {
       },
       {
         root: null,
-        rootMargin: "500px 360px",
+        rootMargin: "500px 150px",
         threshold: 0,
       }
     );
