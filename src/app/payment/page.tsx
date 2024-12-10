@@ -10,11 +10,10 @@ function page() {
         <Image
           src="/paymentView.webp"
           alt="coupon banner"
-          // width={100}
-          // height={100}
+          loading="eager"
           unoptimized={true}
           fill
-          // sizes=" (max-width: 769px) 100vw,50vw"
+          sizes=" (max-width: 769px) 100vw,50vw"
           priority
         />
       </div>
