@@ -17,11 +17,11 @@ function VideoPlayer({ video_src }: { video_src: string }) {
         className="w-full h-full"
         style={{ objectFit: "cover" }}
         ref={videoRef}
-        src={video_src}
         playsInline
-        // poster="https://blocks.astratic.com/videos/general-video.mp4"
         controls
-      />
+      >
+        <source src={video_src} type="video/mp4" />
+      </video>
     </div>
   );
 }
