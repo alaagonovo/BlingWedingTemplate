@@ -35,28 +35,18 @@ function AutoCarousel({
   }, [handleResize]);
 
   const slidesToShow = Math.max(1, windowWidth! / 365);
-
+  console.log(slidesToShow);
   const sliderSettings = React.useMemo(
     () => ({
       infinite: true,
-      slidesToShow, // Number of slides based on the window width
+      slidesToShow,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 7000,
+      speed: 9000 - slidesToShow * 1000,
       autoplaySpeed: 0,
       cssEase: "linear",
       rtl: reverse || false,
       pauseOnHover: false,
-      swipeToSlide: true,
-      responsive: [
-        {
-          breakpoint: 768, // Mobile breakpoint
-          settings: {
-            speed: 10000,
-            autoplaySpeed: 0,
-          },
-        },
-      ],
     }),
     [slidesToShow, reverse] // Recalculate when the number of slides to show or reverse changes
   );
