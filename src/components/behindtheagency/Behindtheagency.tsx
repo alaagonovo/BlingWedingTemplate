@@ -1,14 +1,17 @@
+"use client";
 import React from "react";
 import styles from "./behindtheagency.module.css";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 function Behindtheagency() {
+  const { isVisible, elementRef } = useIntersectionObserver(true);
   return (
-    <section className={styles.main_behind_agency}>
+    <section className={styles.main_behind_agency} ref={elementRef}>
       <div className={styles.title_Container}>
         <div className={styles.img_container}>
           <h1>BEHIND the AGENCY</h1>
           <div
             data-aos="fade-right"
-            style={{ backgroundImage: "url(/Esraa.webp)" }}
+            style={isVisible ? { backgroundImage: "url(/Esraa.webp)" } : {}}
             className={styles.Image}
           ></div>
         </div>

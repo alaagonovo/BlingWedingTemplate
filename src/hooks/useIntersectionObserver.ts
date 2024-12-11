@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export const useIntersectionObserver = () => {
+export const useIntersectionObserver = (notset?: true) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -10,9 +10,13 @@ export const useIntersectionObserver = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // observer.disconnect();
+          if (notset) {
+            observer.disconnect();
+          }
         } else {
-          setIsVisible(false);
+          if (!notset) {
+            setIsVisible(false);
+          }
         }
       },
       {
@@ -28,7 +32,7 @@ export const useIntersectionObserver = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [notset]);
 
   return { isVisible, elementRef };
 };

@@ -75,17 +75,6 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
         {/* Lazy-load the video */}
         {video && isVisible && (
           <>
-            {!isVideoLoaded && fallback && (
-              <Image
-                src={fallback}
-                alt="Loading Video"
-                fill
-                style={{ ...commonStyle, position: "absolute" }}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={fallback}
-              />
-            )}
             <video
               src={video}
               loop
@@ -100,6 +89,18 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
               }}
               onLoadedData={() => setIsVideoLoaded(true)}
             />
+
+            {!isVideoLoaded && fallback && (
+              <Image
+                src={fallback}
+                alt="Loading Video"
+                fill
+                style={{ ...commonStyle, position: "absolute" }}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={fallback}
+              />
+            )}
           </>
         )}
       </div>
