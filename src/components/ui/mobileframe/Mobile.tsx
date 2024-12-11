@@ -11,7 +11,7 @@ interface IMobileframe {
 
 function MobileFrame({ video, image, fallback }: IMobileframe) {
   const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the component is in the viewport
-  const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
+  // const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer to check if the component is in the viewport
@@ -47,7 +47,9 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
     borderRadius: "28px",
     display: "block",
   };
-
+  {
+    console.log(isVisible);
+  }
   return (
     <div className="mobile_container" ref={containerRef}>
       <div className="specker_notch">
@@ -60,6 +62,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
       <p className="button right_btn"></p>
       <div className="mobile_content">
         {/* Lazy-load the image */}
+
         {image && isVisible && (
           <Image
             style={commonStyle}
@@ -85,12 +88,12 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
               preload="auto" // Start loading the video early
               style={{
                 ...commonStyle,
-                display: isVideoLoaded ? "block" : "none",
+                // display: isVideoLoaded ? "block" : "none",
               }}
-              onLoadedData={() => setIsVideoLoaded(true)}
+              // onLoadedData={() => setIsVideoLoaded(true)}
             />
 
-            {!isVideoLoaded && fallback && (
+            {/* {!isVideoLoaded && fallback && (
               <Image
                 src={fallback}
                 alt="Loading Video"
@@ -100,7 +103,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
                 placeholder="blur"
                 blurDataURL={fallback}
               />
-            )}
+            )} */}
           </>
         )}
       </div>
