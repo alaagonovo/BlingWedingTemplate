@@ -10,12 +10,14 @@ export const useIntersectionObserver = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          // observer.disconnect();
+        } else {
+          setIsVisible(false);
         }
       },
       {
         root: null,
-        rootMargin: "500px 150px",
+        rootMargin: "0px 0px",
         threshold: 0.01,
       }
     );

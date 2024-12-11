@@ -21,8 +21,8 @@ const CardCoupon: React.FC<CardCouponProps> = ({
   images,
   altTexts = [],
   discount,
-  minInterval = 1500,
-  maxInterval = 3500,
+  minInterval = 3000,
+  maxInterval = 6000,
 }) => {
   const { isVisible, elementRef } = useIntersectionObserver();
   const [index, setIndex] = useState<number>(0);
@@ -32,20 +32,28 @@ const CardCoupon: React.FC<CardCouponProps> = ({
   }, [images.length]);
 
   useEffect(() => {
+    console.log(isVisible);
     if (!isVisible || images.length === 0) return;
+
+    // Declare timerId outside to ensure it's accessible within the cycleImages function
+    let timerId: NodeJS.Timeout;
 
     const cycleImages = () => {
       nextImage();
       const randomInterval = getRandomInterval(minInterval, maxInterval);
-      setTimeout(cycleImages, randomInterval);
+      timerId = setTimeout(cycleImages, randomInterval); // Schedule the next cycle
     };
 
-    const timerId = setTimeout(
+    // Start the cycle when isVisible is true
+    timerId = setTimeout(
       cycleImages,
       getRandomInterval(minInterval, maxInterval)
     );
 
-    return () => clearTimeout(timerId);
+    // Clean up the timeout if the component is no longer visible
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [isVisible, images.length, minInterval, maxInterval, nextImage]);
 
   const altText =
@@ -55,30 +63,32 @@ const CardCoupon: React.FC<CardCouponProps> = ({
 
   return (
     <div className={styles.card_container} ref={elementRef}>
-      {isVisible && images.length > 0 && (
-        <>
-          <p
-            data-aos="fade-left"
-            className="absolute bg-red-500 bg-opacity-85 py-1 px-2 text-white text-sm font-thin sm:font-medium sm:text-base top-2 sm:top-8 right-0"
-          >
-            <span className="inline sm:hidden">-</span>
-            {discount}% <span className="hidden sm:inline">OFF</span>
-          </p>
+      {
+        /*isVisible &&*/ images.length > 0 && (
+          <>
+            <p
+              data-aos="fade-left"
+              className="absolute bg-red-500 bg-opacity-85 py-1 px-2 text-white text-sm font-thin sm:font-medium sm:text-base top-2 sm:top-8 right-0"
+            >
+              <span className="inline sm:hidden">-</span>
+              {discount}% <span className="hidden sm:inline">OFF</span>
+            </p>
 
-          {/* <Link href="/payment"> */}
-          <Image
-            src={images[index]}
-            width={100}
-            height={100}
-            alt={altText}
-            quality={80}
-            unoptimized={true} // Enable optimization
-            className={styles.coupon_image}
-            loading="lazy"
-          />
-          {/* </Link> */}
-        </>
-      )}
+            {/* <Link href="/payment"> */}
+            <Image
+              src={images[index]}
+              width={100}
+              height={100}
+              alt={altText}
+              sizes="(max-width: 600px) 33vw, (max-width: 1238px) 25vw, 20vw"
+              unoptimized={true} // Enable optimization
+              className={styles.coupon_image}
+              // priority
+            />
+            {/* </Link> */}
+          </>
+        )
+      }
     </div>
   );
 };
