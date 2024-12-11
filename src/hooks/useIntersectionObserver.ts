@@ -21,7 +21,7 @@ export const useIntersectionObserver = (notset?: true) => {
       },
       {
         root: null,
-        rootMargin: "0px 0px",
+        rootMargin: "50px",
         threshold: 0.01,
       }
     );

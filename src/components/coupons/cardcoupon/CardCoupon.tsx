@@ -83,6 +83,7 @@ const CardCoupon: React.FC<CardCouponProps> = ({
               sizes="(max-width: 600px) 33vw, (max-width: 1238px) 25vw, 20vw"
               unoptimized={true} // Enable optimization
               className={styles.coupon_image}
+              loading="lazy"
               // priority
             />
             {/* </Link> */}
