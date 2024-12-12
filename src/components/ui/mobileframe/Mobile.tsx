@@ -11,7 +11,8 @@ interface IMobileframe {
 
 function MobileFrame({ video, image, fallback }: IMobileframe) {
   const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the component is in the viewport
-  // const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false); // To track if the video is loaded
+  const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false);
+  // To track if the video is loaded
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer to check if the component is in the viewport
@@ -88,12 +89,12 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
               preload="auto" // Start loading the video early
               style={{
                 ...commonStyle,
-                // display: isVideoLoaded ? "block" : "none",
+                display: isVideoLoaded ? "block" : "none",
               }}
-              // onLoadedData={() => setIsVideoLoaded(true)}
+              onLoadedData={() => setIsVideoLoaded(true)}
             />
 
-            {/* {!isVideoLoaded && fallback && (
+            {!isVideoLoaded && fallback && (
               <Image
                 src={fallback}
                 alt="Loading Video"
@@ -103,7 +104,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
                 placeholder="blur"
                 blurDataURL={fallback}
               />
-            )} */}
+            )}
           </>
         )}
       </div>
