@@ -84,10 +84,10 @@ interface IViewCard {
   index: number;
 }
 
-const ViewCard = ({ img_src, vid_src, /*img_fallback,*/ index }: IViewCard) => {
+const ViewCard = ({ img_src, vid_src, img_fallback, index }: IViewCard) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -112,17 +112,30 @@ const ViewCard = ({ img_src, vid_src, /*img_fallback,*/ index }: IViewCard) => {
   return (
     <div ref={elementRef} className={styles.main_cover}>
       {vid_src && isVisible && (
-        <video
-          className={styles.video}
-          autoPlay
-          muted
-          loop
-          playsInline
-          // poster={img_fallback}
-          preload="metadata"
-        >
-          <source src={vid_src} type="video/mp4" />
-        </video>
+        <>
+          {!isLoaded && img_fallback && (
+            <Image
+              className={styles.img_Cover}
+              src={img_fallback}
+              alt="viewImage"
+              width={345}
+              height={195}
+              priority={true}
+              sizes="345px"
+            />
+          )}
+          <video
+            className={styles.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            onLoadedData={() => setIsLoaded(true)}
+            preload="metadata"
+          >
+            <source src={vid_src} type="video/mp4" />
+          </video>
+        </>
       )}
       {img_src && (
         <Image
