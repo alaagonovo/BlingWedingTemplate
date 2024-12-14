@@ -4,6 +4,7 @@ import styles from "./behindtheagency.module.css";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 function Behindtheagency() {
   const { isVisible, elementRef } = useIntersectionObserver(true);
+
   return (
     <section className={styles.main_behind_agency} ref={elementRef}>
       <div className={styles.title_Container}>

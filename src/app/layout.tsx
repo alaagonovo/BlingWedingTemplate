@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${nunito.className} ${kristi.className}`}>
-      <head>
+      {/* <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -63,7 +63,7 @@ export default function RootLayout({
           imageSrcSet="/_next/image?url=%2F16.webp&amp;w=345&amp;q=75"
           type="image/webp"
         />
-      </head>
+      </head> */}
       <body>
         <WithAOS>
           <Header />
