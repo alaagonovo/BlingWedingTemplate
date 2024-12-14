@@ -48,7 +48,6 @@ function AutoCarousel({
     pauseOnHover: false,
   }; // Recalculate when the number of slides to show or reverse changes
 
-  console.log(data);
   // If windowWidth is not yet set or data is empty, show loader or empty state
   if (windowWidth === null || !data || data.length === 0) {
     return <Skilliton />; // Consider improving the "Skilliton" loading experience if necessary

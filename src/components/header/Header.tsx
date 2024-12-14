@@ -49,7 +49,7 @@ const Header = () => {
       }
     }
   };
-  console.log("Header", isHidden);
+
   return (
     <header
       className={`${styles.header_Container} ${

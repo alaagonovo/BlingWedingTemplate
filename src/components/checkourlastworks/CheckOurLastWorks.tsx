@@ -27,7 +27,7 @@ function CheckOurLastWorks() {
       window.removeEventListener("resize", updateWindowWidth);
     };
   }, []);
-  console.log("latest work");
+
   // When mouse button is pressed down
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!scrollRef.current) return;

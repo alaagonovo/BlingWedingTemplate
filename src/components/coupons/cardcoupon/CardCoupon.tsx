@@ -32,7 +32,6 @@ const CardCoupon: React.FC<CardCouponProps> = ({
   }, [images.length]);
 
   useEffect(() => {
-    console.log(isVisible);
     if (!isVisible || images.length === 0) return;
 
     // Declare timerId outside to ensure it's accessible within the cycleImages function

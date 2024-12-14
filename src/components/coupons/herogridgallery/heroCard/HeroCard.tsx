@@ -10,7 +10,6 @@ function HeroCard({ item }: { item: Tables<"vendors"> }) {
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null); // Store the interval ID
 
   const handleMouseEnter = () => {
-    console.log("cursor hover");
     if (item.images && item.images.length > 1) {
       const id = setInterval(() => {
         setCurrentImageIndex((prevIndex) => {

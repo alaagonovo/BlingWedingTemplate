@@ -48,9 +48,7 @@ function MobileFrame({ video, image, fallback }: IMobileframe) {
     borderRadius: "28px",
     display: "block",
   };
-  {
-    console.log(isVisible, "is visable from mobile frame");
-  }
+
   return (
     <div className="mobile_container" ref={containerRef}>
       <div className="specker_notch">
