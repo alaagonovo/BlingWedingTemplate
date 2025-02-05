@@ -55,7 +55,7 @@ function Footer() {
             <span className={styles.copyright}>
               © 2024 BLING.
               <br /> Proudly Designed by{" "}
-              <Link className="font-semibold" href="https://www.gonovo.tech/">
+              <Link className="font-semibold" href="https://gonovo.tech/">
                 GONOVO
               </Link>
             </span>
