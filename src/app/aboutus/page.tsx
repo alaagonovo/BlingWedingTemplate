@@ -16,6 +16,16 @@ function page() {
       image: "/about3.webp",
       title: "COUPONS",
     },
+    {
+      image: "/ras_elkhima2.webp",
+      title: "EWPC event",
+      pdf: "/pdfs/Press Release - EWPC.pdf",
+    },
+    {
+      image: "/ras_elkhima1.webp",
+      title: "EWPC event",
+      pdf: "/pdfs/The Global Luxury Wedding Industry Gears Up for its Most Anticipated Edition of EWPC in Ras Al.pdf",
+    },
   ];
   return (
     <div className={styles.main_about}>
