@@ -1,8 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function PdfViewer() {
+function PdfContent() {
   const searchParams = useSearchParams();
   const pdfSrc = searchParams.get("src");
 
@@ -17,5 +18,13 @@ export default function PdfViewer() {
         style={{ border: "none", overflowY: "scroll" }}
       />
     </div>
+  );
+}
+
+export default function PdfViewer() {
+  return (
+    <Suspense fallback={<p>Loading PDF...</p>}>
+      <PdfContent />
+    </Suspense>
   );
 }
